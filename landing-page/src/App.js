@@ -17,6 +17,7 @@ export default App; */
 import React from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import Card from "./components/Card";
 import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import './index.css'; // Ensure Tailwind is imported
@@ -26,6 +27,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <Card />
       <AboutUs />
       <Footer />
     </div>
