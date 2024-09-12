@@ -1,0 +1,106 @@
+/* src/components/FeaturesSection.css */
+
+.features-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa; /* Light background for a clean look */
+    width: 100vw; /* Ensure full viewport width */
+    margin-left: calc(-50vw + 50%); /* Offset to counteract container padding */
+    margin-right: calc(-50vw + 50%); /* Offset to counteract container padding */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #343a40; /* Dark gray text color */
+    text-align: center; /* Center align the heading */
+}
+
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    height: 100%; /* Ensure all cards are the same height */
+    text-align: center; /* Center align text inside the card */
+    max-height: 400px; /* Ensure uniform height for all cards */
+}
+
+.feature-card .feature-icon {
+    font-size: 2.5rem; /* Increased icon size for better visual impact */
+    margin-bottom: 1rem;
+}
+
+.feature-card h5 {
+    font-size: 1.5rem; /* Larger font size for better readability */
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #6c757d; /* Light gray text color */
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Space between text and button */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .btn-feature {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff; /* White text for contrast */
+    font-weight: 600; /* Bold text */
+    padding: 0.75rem 2rem; /* Padding for a consistent button size */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 1rem; /* Space above button */
+    text-transform: uppercase; /* Uppercase text for consistency */
+}
+
+.feature-card .btn-feature:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for hover/focus */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.feature-card .btn-feature:active,
+.feature-card .btn-feature:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Custom focus ring */
+}
+
+/* Styles for tab headers as buttons */
+.nav-tabs .nav-link {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    font-weight: 600;
+    text-transform: uppercase; /* Uppercase text for consistency */
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    margin: 0.25rem; /* Space between tabs */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-section {
+        padding: 3rem 1rem;
+    }
+}

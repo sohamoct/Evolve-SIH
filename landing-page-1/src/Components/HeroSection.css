@@ -1,0 +1,175 @@
+/* src/components/HeroSection.css */
+
+/* Default styles for hero-section */
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem; /* Padding for spacious feel */
+  min-height: 100vh;
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Counteract container padding */
+  margin-right: calc(-50vw + 50%); /* Counteract container padding */
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Soft blue gradient background */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 2rem;
+  max-width: 600px;
+  color: #212529;
+  text-align: left;
+  z-index: 2; /* Ensure text is above any background effects */
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Larger heading for more impact */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text .gradient-text {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.125rem; /* Base size for larger screens */
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #495057;
+  max-width: 80%; /* Ensure text doesn't span full width on large screens */
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem; /* Larger button for better visibility */
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded button for a modern look */
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Button lift effect */
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  max-width: 80%; /* Adjusted size to be smaller */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Decorative elements */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/Polygon.png') no-repeat center center/contain; /* Polygon image as background */
+  opacity: 0.1;
+  z-index: 0;
+  background-size: 200px; /* Adjust size as needed */
+  background-position: 0 0; /* Ensure image covers the section */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem; /* Adjust padding for tablets */
+  }
+
+  .hero-text {
+    max-width: 80%;
+    padding: 1.5rem;
+  }
+
+  .hero-image {
+    margin-top: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.75rem; /* Adjusted size for tablets */
+  }
+
+  .hero-text p {
+    font-size: 1.25rem; /* Larger text for tablets */
+  }
+
+  .hero-image img {
+    max-width: 75%; /* Slightly smaller image for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.125rem; /* Larger text for phones */
+  }
+
+  .hero-image img {
+    max-width: 90%; /* Adjust size for phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Larger text for very small screens */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Full width for very small screens */
+  }
+}
