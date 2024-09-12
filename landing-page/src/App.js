@@ -27,7 +27,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
-      <Card />
+      {/* <Card /> */}
       <AboutUs />
       <Footer />
     </div>
