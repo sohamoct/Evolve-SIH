@@ -19,7 +19,9 @@
 .nav-item {
   margin: 0 20px; /* Increased margin for better spacing */
 }
-
+.navbar .d-flex a {
+  margin-left: 15px; /* Adjust the value for more or less spacing */
+}
 .nav-link {
   color: #ecf0f1; /* Light color for text, making it stand out on dark background */
   font-weight: normal; /* Normal weight for all links */
@@ -42,14 +44,16 @@
   outline: none; /* Remove default outline for better visual control */
 }
 
+/* Primary Button Styles */
 .btn-primary {
   background-color: #3498db; /* Bright blue for the primary button */
   border-color: #3498db;
   color: #ffffff;
+  height: 3rem;
   padding: 0.75rem 1.5rem; /* Padding for the button */
   border-radius: 25px; /* Rounded button corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
   text-decoration: none; /* Remove underline from links */
   display: inline-block; /* Ensure button behaves like a button */
 }
@@ -60,17 +64,14 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
-/* src/components/Navbar.css */
-
-/* Other styles remain unchanged */
-
+/* Outline Light Button Styles */
 .btn-outline-light {
   border-color: #ecf0f1;
   color: black;
   padding: 0.75rem 1.5rem; /* Padding for the button */
   border-radius: 25px; /* Rounded button corners */
   background-color: rgb(197, 197, 232); /* Transparent background */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
   text-decoration: none; /* Remove underline from links */
   display: inline-block; /* Ensure button behaves like a button */
 }
@@ -78,16 +79,17 @@
 .btn-outline-light:hover {
   background-color: #ecf0f1; /* Light background color on hover */
   color: #2c3e50; /* Darker text color for contrast on hover */
+  border-color: #ecf0f1; /* Ensure border color matches the background color on hover */
 }
 
-/* New class for the fully colored login button */
+/* Login Button Styles */
 .btn-login {
   background-color: #e74c3c; /* Bright red for the login button */
   border-color: #e74c3c; /* Match border color to the background */
   color: #ffffff; /* White text color */
   padding: 0.75rem 1.5rem; /* Padding for the button */
   border-radius: 25px; /* Rounded button corners */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
   text-decoration: none; /* Remove underline from links */
   display: inline-block; /* Ensure button behaves like a button */
 }
@@ -97,4 +99,3 @@
   border-color: #c0392b; /* Match border color to the background */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
-

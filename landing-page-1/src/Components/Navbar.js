@@ -1,6 +1,7 @@
 // src/components/Navbar.js
 import React from 'react';
 import './Navbar.css';
+import Button from "./Button.js";
 import logo from '../images/Logo.png'; // Import your logo
 
 const Navbar = () => {
@@ -46,7 +47,8 @@ const Navbar = () => {
 
           {/* Login and Signup Buttons */}
           <div className="d-flex">
-            <a className="btn btn-outline-light me-2" href="/">Login</a>
+             <Button/>
+            {/* <a className="btn btn-outline-light me-2" href="/">Login</a> */}
             <a className="btn btn-primary" href="/">Signup</a>
           </div>
         </div>
