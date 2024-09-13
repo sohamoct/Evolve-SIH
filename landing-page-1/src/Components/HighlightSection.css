@@ -1,0 +1,38 @@
+.highlight-section {
+    background: #f0f4f8; /* Very light gray background for a clean look */
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Ensure a decent height */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    margin: 2rem 0; /* Margin for spacing */
+    width: 100%; /* Full width */
+}
+
+.highlight-quote {
+    font-size: 1.5rem;
+    color: #333; /* Darker text color for readability */
+    font-style: italic; /* Italic style for emphasis */
+    position: relative; /* For positioning the quote border */
+    padding: 1.5rem 2rem; /* Padding around the quote */
+    background: linear-gradient(135deg, #ffffff, #f5f7f9); /* Gradient background */
+    border-left: 5px solid #007bff; /* Blue left border for emphasis */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Limit width for better readability */
+    margin-bottom: 1.5rem; /* Space below the quote */
+}
+
+.highlight-quote p {
+    margin: 0; /* Remove default margin for the paragraph */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Button styling is handled by the Button component */
+.btn-get-started {
+    margin-top: 1rem; /* Space between the quote and button */
+}

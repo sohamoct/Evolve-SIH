@@ -6,6 +6,9 @@
     width: 100vw; /* Ensure full viewport width */
     margin-left: calc(-50vw + 50%); /* Offset to counteract container padding */
     margin-right: calc(-50vw + 50%); /* Offset to counteract container padding */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center cards horizontally */
 }
 
 .features-section h2 {
@@ -13,8 +16,10 @@
     margin-bottom: 1.5rem;
     color: #343a40; /* Dark gray text color */
     text-align: center; /* Center align the heading */
+    width: 100%; /* Ensure heading spans full width */
 }
 
+/* Adjustments to prevent card stretching */
 .feature-card {
     border: none;
     border-radius: 10px;
@@ -24,32 +29,16 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content */
-    height: 100%; /* Ensure all cards are the same height */
     text-align: center; /* Center align text inside the card */
-    max-height: 400px; /* Ensure uniform height for all cards */
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Max width to ensure cards don't grow too large */
+    margin: 1rem; /* Space between cards */
+    flex: 1 1 auto; /* Allow cards to grow and shrink as needed */
+    min-height: 300px; /* Ensure a minimum height for cards */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-.feature-card .feature-icon {
-    font-size: 2.5rem; /* Increased icon size for better visual impact */
-    margin-bottom: 1rem;
-}
-
-.feature-card h5 {
-    font-size: 1.5rem; /* Larger font size for better readability */
-    margin-bottom: 0.5rem;
-}
-
-.feature-card p {
-    color: #6c757d; /* Light gray text color */
-    font-size: 1rem;
-    margin-bottom: 1rem; /* Space between text and button */
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
+/* Ensure the button is centered in the card */
 .feature-card .btn-feature {
     background-color: #007bff;
     border-color: #007bff;
@@ -60,6 +49,8 @@
     transition: all 0.3s ease; /* Smooth transition */
     margin-top: 1rem; /* Space above button */
     text-transform: uppercase; /* Uppercase text for consistency */
+    align-self: center; /* Center the button within the card */
+    display: inline-block; /* Ensure button behaves like a button */
 }
 
 .feature-card .btn-feature:hover {
@@ -99,8 +90,41 @@
 }
 
 /* Responsive Styles */
+@media (min-width: 914px) {
+    .features-section {
+        padding: 3rem 2rem;
+    }
+
+    .feature-card {
+        max-width: 300px; /* Ensure uniform card width */
+        margin: 1rem; /* Consistent spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-card {
+        min-height: 300px; /* Consistent minimum height for larger screens */
+    }
+}
+
 @media (max-width: 768px) {
     .features-section {
         padding: 3rem 1rem;
+    }
+
+    .feature-card {
+        max-width: 100%; /* Ensure cards take full width on small screens */
+        margin: 1rem 0; /* Add vertical spacing on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .features-section {
+        padding: 2rem 0.5rem; /* Reduce padding on very small screens */
+    }
+
+    .feature-card {
+        max-width: 100%; /* Ensure cards take full width on very small screens */
+        margin: 0.5rem 0; /* Reduce margin for tighter spacing */
     }
 }

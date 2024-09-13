@@ -1,0 +1,136 @@
+/* Container for the carousel */
+.carousel-container {
+    width: 100%;
+    background: #f0f4f8; /* Greyish-white background */
+    padding: 80px 0; /* Increased spacing above and below the carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; /* Space between carousel and footer */
+  }
+  
+  /* Wrapper for the carousel */
+  .carousel-wrapper {
+    max-width: 1200px; /* Max width to keep content centered */
+    width: 100%; /* Full width within the max-width constraint */
+    background: #ffffff; /* White background for the carousel */
+    border-radius: 15px; /* Rounded corners for the wrapper */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    overflow: hidden; /* Ensure content doesn’t overflow */
+  }
+  
+  /* Heading of the carousel */
+  .carousel-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center; /* Center align heading */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Padding around the heading */
+    background: #ffffff; /* White background for the heading */
+  }
+  
+  /* Content inside each carousel item */
+  .carousel-item-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Image container */
+  .carousel-image-container {
+    position: relative;
+    flex: 1; /* Allow image container to grow */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide overflow to maintain container bounds */
+  }
+  
+  /* Style for carousel images */
+  .carousel-image {
+    border-radius: 15px; /* Rounded corners for the image */
+    object-fit: cover;
+    height: 300px; /* Set fixed height */
+    width: 100%; /* Full width of container */
+    max-width: 500px; /* Maximum width to ensure proportional scaling */
+    filter: brightness(0.75); /* Darken image for better text contrast */
+    transition: transform 0.5s ease;
+  }
+  
+  /* Hover effect for images */
+  .carousel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Card styling */
+  .carousel-card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for card */
+    text-align: left;
+    padding: 30px;
+    margin: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  /* Card hover effect */
+  .carousel-card:hover {
+    background: rgba(255, 255, 255, 1); /* Solid white background on hover */
+  }
+  
+  /* Card title styling */
+  .carousel-card .card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+  }
+  
+  /* Card text styling */
+  .carousel-card .card-text {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .carousel-item-content {
+      flex-direction: column;
+      align-items: center; /* Center items horizontally in column layout */
+    }
+  
+    .carousel-image {
+      width: 100%; /* Full width for smaller screens */
+      height: auto; /* Auto height to maintain aspect ratio */
+      max-height: 300px; /* Limit max height */
+      max-width: none; /* Remove max-width constraint for small screens */
+      margin-bottom: 20px;
+    }
+  
+    .carousel-card {
+      text-align: center;
+    }
+  }
+  
+  /* Carousel control arrows */
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: black; /* Set arrow color to black */
+    font-size: 2rem; /* Adjust size if needed */
+    width: 5%; /* Adjust width if needed */
+  }
+  
+  /* Optional: Add a background or border to arrows for better visibility */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Rounded background */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none; /* Remove default background image */
+  }
+  

@@ -9,7 +9,7 @@
 }
 
 .navbar-brand img {
-  max-height: 50px; /* Adjust as necessary for your logo */
+  max-height: 48px; /* Adjust as necessary for your logo */
 }
 
 .navbar-nav {
@@ -98,4 +98,39 @@
   background-color: #c0392b; /* Darker red on hover for a more dynamic effect */
   border-color: #c0392b; /* Match border color to the background */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center; /* Center align menu items on mobile */
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Increase vertical spacing on mobile */
+  }
+
+/* Ensure Bootstrap CSS is properly loaded */
+  /* Ensure Bootstrap CSS is properly loaded */
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23fff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E'); /* White hamburger icon */
+    }
+
+    /* Optional: If needed, you can adjust the size of the toggler */
+    .navbar-toggler {
+      border: none; /* Remove default border */
+    }
+
+  .collapse.navbar-collapse {
+    background-color: #2c3e50; /* Same as navbar background for consistency */
+    padding: 15px 0; /* Add padding for better spacing */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Larger text size for better readability on mobile */
+    padding: 10px 0; /* Add vertical padding */
+  }
+
+  .btn-primary {
+    width: 100%; /* Full-width button on mobile for better touch accessibility */
+    text-align: center; /* Center text inside the button */
+  }
 }
