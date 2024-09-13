@@ -33,7 +33,7 @@ body, html {
     align-items: center;
     min-height: 100vh; /* Full viewport height for proper centering */
     position: relative;
-    margin-top: 80px; /* Adjust based on the height of your navbar */
+    margin-top: 50px; /* Adjust based on the height of your navbar */
     z-index: 2; /* Ensure the login form is above the overlay */
     animation: fadeIn 1s ease-in-out;
   }

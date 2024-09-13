@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { FaGoogle, FaFacebookF, FaGithub } from 'react-icons/fa';
 import { Eye, EyeSlash } from 'react-bootstrap-icons';
-import './LoginPage.css'; // Custom CSS for styling
+import { Link } from 'react-router-dom';
 
-const LoginPage = () => {
+function Signup() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('student');
@@ -24,8 +25,19 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="login-form-container">
         <div className="login-form">
-          <h2 className="text-center p-2">Login</h2>
+          <h2 className="text-center py-2">Sign Up</h2>
           <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="formBasicName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="name"
+                placeholder="Enter name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </Form.Group>
+
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -52,7 +64,7 @@ const LoginPage = () => {
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>Login as</Form.Label>
+              <Form.Label>Sign up as</Form.Label>
               <div className="radio-group">
                 <Form.Check
                   type="radio"
@@ -74,19 +86,19 @@ const LoginPage = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit" className="w-100">
-              Login
+              SignUp
             </Button>
-            <Button variant="link" className="forgot-password mt-3" onClick={() => alert('Forgot Password Clicked')}>
+            {/* <Button variant="link" className="forgot-password mt-3" onClick={() => alert('Forgot Password Clicked')}>
               Forgot Password?
-            </Button>
-            <div className="text-center mt-3">
-              <a href="/signup">Don't have an account? Sign up</a>
+            </Button> */}
+            <div className="text-center mt-4">
+              <a href="/login">Have an account? Login</a>
             </div>
           </Form>
 
           {/* Social Login Buttons */}
           <div className="social-login mt-4 text-center">
-            <p>Or login with:</p>
+            <p>Or Sign up with:</p>
             <div className="social-buttons">
               <Button variant="light" className="social-button">
                 <FaGoogle className="social-icon" />
@@ -96,10 +108,10 @@ const LoginPage = () => {
                 <FaFacebookF className="social-icon" />
                 Facebook
               </Button>
-              <Button variant="light" className="social-button">
+              {/* <Button variant="light" className="social-button">
                 <FaGithub className="social-icon" />
                 GitHub
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -109,6 +121,6 @@ const LoginPage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default LoginPage;
+export default Signup;

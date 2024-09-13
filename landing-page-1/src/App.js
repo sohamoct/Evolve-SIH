@@ -8,6 +8,7 @@ import HighlightSection from './HomePage/HighlightSection';
 import Footer from './HomePage/Footer';
 import Carousel from './HomePage/Carousel';
 import LoginPage from './LoginPage/LoginPage'; 
+import SignUp from './SignUp/SignUp'; // Import the SignUp component
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           }
         />
         <Route path="/login" element={<LoginPage />} /> {/* Add the route for LoginPage */}
+        <Route path="/signup" element={<SignUp />} /> {/* Add the route for SignUp */}
         {/* Add more routes as needed */}
       </Routes>
     </Router>

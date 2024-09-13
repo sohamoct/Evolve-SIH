@@ -6,7 +6,7 @@ import OurMission from "../images/OurMission.png";
 
 const CustomCarousel = () => {
   return (
-    <div className="carousel-container">
+    <div id="about" className="carousel-container">
       <div className="carousel-wrapper">
         <h2 className="carousel-heading">About Us</h2>
         <Carousel indicators={false} controls={true} interval={5000}>

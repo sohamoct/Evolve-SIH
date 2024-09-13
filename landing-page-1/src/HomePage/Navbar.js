@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link className="btn btn-outline-light me-2" to="/login">
               <span>Login</span>
             </Link>
-            <a className="btn btn-primary" href="/">Signup</a>
+            <a className="btn btn-primary" href="/signup">Signup</a>
           </div>
         </div>
       </div>
