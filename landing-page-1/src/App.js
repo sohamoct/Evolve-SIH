@@ -7,7 +7,7 @@ import FeaturesSection from './HomePage/FeaturesSection';
 import HighlightSection from './HomePage/HighlightSection';
 import Footer from './HomePage/Footer';
 import Carousel from './HomePage/Carousel';
-import LoginPage from './LoginPage/LoginPage'; // Import the LoginPage component
+import LoginPage from './LoginPage/LoginPage'; 
 
 function App() {
   return (
@@ -18,11 +18,18 @@ function App() {
           path="/"
           element={
             <div className="container mt-5">
-              <HeroSection />
-              <FeaturesSection />
-              <HighlightSection />
-              <Carousel />
-              <Footer />
+              <section id="home-section">
+                <HeroSection />
+              </section>
+              <section id="features-section">
+                <FeaturesSection />
+              </section>
+              <section id="carousel-section">
+                <Carousel />
+              </section>
+              <section id="footer">
+                <Footer />
+              </section>
             </div>
           }
         />

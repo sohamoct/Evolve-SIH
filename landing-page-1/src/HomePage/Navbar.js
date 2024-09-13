@@ -1,8 +1,7 @@
-// src/components/Navbar.js
+// src/HomePage/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Navbar.css';
-import Button from './Button.js';
 import logo from '../images/Logo.png'; // Import your logo
 
 const Navbar = () => {
@@ -31,22 +30,24 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">Home</Link>
+              <Link className="nav-link" to="/">Home</Link> {/* Direct to home */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">About Us</Link>
+              <a className="nav-link" href="#features-section">Features</a> {/* Scroll to Features */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">Features</Link>
+              <a className="nav-link" href="#carousel-section">About Us</a> {/* Scroll to Carousel */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">Contact Us</Link>
+              <a className="nav-link" href="#footer">Contact Us</a> {/* Scroll to Footer */}
             </li>
           </ul>
 
           {/* Login and Signup Buttons */}
           <div className="d-flex">
-            <Link className="btn btn-outline-light me-2" to="/login">Login</Link> {/* Update to use Link */}
+            <Link className="btn btn-outline-light me-2" to="/login">
+              <span>Login</span>
+            </Link>
             <a className="btn btn-primary" href="/">Signup</a>
           </div>
         </div>
