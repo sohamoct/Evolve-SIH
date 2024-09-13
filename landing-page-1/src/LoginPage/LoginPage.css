@@ -1,0 +1,234 @@
+/* Apply background image to the entire viewport */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-vector/winter-light-blue-gradient-vector-background_53876-126054.jpg?t=st=1726227376~exp=1726230976~hmac=fd980b2d479285e9c95a3b327136dc0667a516a3a8b422bcc413674e7ff4bf9d&w=900') no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto; /* Allow scrolling */
+  }
+  
+  /* Container for the background image and overlay */
+  .background-container {
+    position: relative;
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    width: 100%; /* Full viewport width */
+  }
+  
+  /* Overlay to dim the background image */
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust opacity here */
+    z-index: 1; /* Ensure the overlay is above the background image */
+  }
+  
+  /* Container for the login page */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height for proper centering */
+    position: relative;
+    margin-top: 80px; /* Adjust based on the height of your navbar */
+    z-index: 2; /* Ensure the login form is above the overlay */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Animation for fading in the container */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Login form styling */
+  .login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px; /* Adjust width as needed */
+    animation: scaleUp 0.5s ease-in-out;
+  }
+  
+  /* Animation for scaling up the container */
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Form styling */
+  .login-form {
+    width: 100%;
+  }
+  
+  /* Center the form title */
+  .login-form h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Removed the box-shadow from the heading */
+  }
+  
+  /* Form labels and controls */
+  .form-label {
+    font-weight: 500;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    padding-right: 40px; /* Ensure there's space for the icon */
+  }
+  
+  /* Password visibility eye icon */
+  .position-relative {
+    position: relative;
+  }
+  
+  .password-eye {
+    position: absolute;
+    top: 65%;
+    right: 10px;
+    transform: translateY(-50%); /* Center vertically */
+    cursor: pointer;
+    color: #007bff;
+    z-index: 10; /* Ensure the icon is above the input field */
+  }
+  
+  .password-eye svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Radio button group styling */
+  .radio-group {
+    display: flex;
+    justify-content: space-between; /* Space between radio buttons */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 15px; /* Space below the radio group */
+  }
+  
+  /* Custom styling for radio buttons */
+  .form-check-label {
+    margin-left: 0.5rem;
+    color: #333;
+  }
+  
+  .form-check-input {
+    margin-top: 0.3rem;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  /* Forgot Password button styling */
+  .forgot-password {
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .forgot-password:hover {
+    color: #0056b3;
+  }
+  
+  /* Social login button styling */
+  .social-login {
+    margin-top: 20px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px; /* Adjust padding for smaller buttons */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-transform: capitalize;
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.3s;
+  }
+  
+  .social-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  /* Link styling */
+  .text-center a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .login-form-container {
+      padding: 20px;
+      box-shadow: none;
+    }
+  
+    .login-form {
+      max-width: 100%; /* Ensure form width fits on small screens */
+    }
+  }
+  
