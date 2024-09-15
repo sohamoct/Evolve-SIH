@@ -1,0 +1,18 @@
+/* src/components/CourseList.css */
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .course-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

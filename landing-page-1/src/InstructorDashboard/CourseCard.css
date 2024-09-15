@@ -1,0 +1,40 @@
+/* src/components/CourseCard.css */
+.course-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Reduced margin for better spacing */
+    padding: 15px; /* Adjusted padding for a compact look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 250px; /* Reduced max-width for compact cards */
+  }
+  
+  .course-image {
+    width: 80px; /* Adjusted image size */
+    height: 80px; /* Adjusted image size */
+    object-fit: cover; /* Changed from contain to cover for better appearance */
+    margin-bottom: 15px; /* Adjusted spacing */
+  }
+  
+  .course-info {
+    margin-bottom: 10px;
+  }
+  
+  .course-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .course-button:hover {
+    background-color: #0056b3;
+  }
+  
