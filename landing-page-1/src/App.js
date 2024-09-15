@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 import Navbar from './HomePage/Navbar';
+import InstructorNavbar from './InstructorDashboard/InstructorNavbar'; // Import InstructorNavbar
 import HeroSection from './HomePage/HeroSection';
 import FeaturesSection from './HomePage/FeaturesSection';
 import HighlightSection from './HomePage/HighlightSection';
@@ -9,6 +12,19 @@ import Carousel from './HomePage/Carousel';
 import LoginPage from './LoginPage/LoginPage'; 
 import SignUp from './SignUp/SignUp'; 
 import InstructorDashboard from './InstructorDashboard/InstructorDashboard'; // Import the InstructorDashboard component
+
+// Component to conditionally render Navbar
+const Layout = ({ children }) => {
+  const location = useLocation();
+  const isInstructorRoute = location.pathname.includes('/instructor-dashboard'); // Check if route contains 'instructor'
+
+  return (
+    <>
+      {isInstructorRoute ? <InstructorNavbar /> : <Navbar />} {/* Conditional Navbar */}
+      {children}
+    </>
+  );
+};
 
 function App() {
   return (
@@ -42,9 +58,15 @@ function App() {
         {/* Sign up page route */}
         <Route path="/signup" element={<SignUp />} /> 
         
-        {/* Instructor Dashboard route */}
-        <Route path="/instructor-dashboard" element={<InstructorDashboard />} /> {/* Add InstructorDashboard */}
-        
+        {/* Instructor Routes */}
+        <Route
+          path="/instructor-dashboard"
+          element={
+            <Layout>
+              <InstructorDashboard />
+            </Layout>
+          }
+        />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
