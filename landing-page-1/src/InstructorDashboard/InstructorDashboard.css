@@ -1,16 +1,28 @@
+:root {
+  --primary-color: #242dac; /* Main color used for the bar and highlights */
+  --secondary-color: #e0e0e0; /* Used for light backgrounds */
+  --bg-color: #f4f4f9; /* Background color for dashboard */
+  --font-color: #2d3748; /* Font color for dark text */
+  --accent-color: #4caf50; /* Accent color for learners */
+  --border-color: #d1d9e6; /* Light border */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.2); /* Dark shadow */
+}
+
 .instructor-dashboard {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f9; /* Light background color for better contrast */
+  background-color: var(--bg-color); /* Use variable */
 }
 
 .dashboard-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+  margin-bottom: 40px; /* Increased margin to ensure space between rows */
+  flex-wrap: wrap;
 }
+
 
 .learning-trend-chart,
 .learner-distribution-chart,
@@ -24,17 +36,17 @@
 
 .total-learners:hover {
   transform: scale(1.03); /* Slightly zooms in on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+  box-shadow: 0 12px 24px var(--shadow-dark); /* Increases shadow on hover */
 }
 
 .total-learners {
-  text-align: center; /* Center-align the content */
-  border: 1px solid #d1d9e6; /* Light border */
-  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
   padding: 20px;
   background: linear-gradient(145deg, #ffffff, #f0f4f8); /* Subtle gradient background */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More prominent shadow */
-  color: #1e3a8a; /* Dark blue text color */
+  box-shadow: 0 8px 16px var(--shadow-light); /* More prominent shadow */
+  color: var(--primary-color);
   height: 250px; /* Increased height to accommodate the bar */
   display: flex;
   flex-direction: column;
@@ -48,48 +60,48 @@
 .total-learners h3 {
   font-size: 1.5rem; /* Adjust font size for consistency */
   margin-bottom: 10px; /* Space below the heading */
-  font-weight: bold; /* Bold text for emphasis */
+  font-weight: bold;
   opacity: 0; /* Start hidden for animation */
   animation: fadeIn 1s ease-in forwards 0.5s; /* Fade in with delay */
 }
 
 .total-learners p {
-  font-size: 2rem; /* Adjust font size for consistency */
+  font-size: 2rem;
   margin: 0;
-  font-weight: 600; /* Slightly bolder text for the number */
-  color: #2d3748; /* Darker text color for better contrast */
+  font-weight: 600;
+  color: var(--font-color);
   opacity: 0; /* Start hidden for animation */
   animation: fadeIn 1s ease-in forwards 1s; /* Fade in with delay */
 }
 
 .total-learners-bar-container {
   width: 100%; /* Full width of the parent container */
-  background-color: #e0e0e0; /* Light grey background */
+  background-color: var(--secondary-color); /* Light grey background */
   border-radius: 5px;
   height: 20px;
   margin: 10px 0;
   position: relative;
-  overflow: hidden; /* Ensure the bar is contained */
+  overflow: hidden;
 }
 
 .total-learners-bar {
-  background-color: #242dac; /* Green color for the bar */
+  background-color: var(--primary-color); /* Consistent color usage */
   height: 100%;
   border-radius: 5px;
   transition: width 0.3s ease;
-  animation: expandBar 1s ease-out; /* Animation for the bar width */
+  animation: expandBar 1s ease-out;
 }
 
 .leaderboard-section,
 .courses-section {
-  flex: 1 1 48%; /* Flex grow and shrink with a basis of 48% width */
+  flex: 1 1 48%;
   margin: 10px;
-  min-width: 300px; /* Ensures content doesn't get too narrow */
-  box-sizing: border-box; /* Ensures padding and borders are included in the width */
-  background: #ffffff; /* Background color for consistency */
-  border: 1px solid #e1e5e9; /* Light border */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+  min-width: 300px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px var(--shadow-light);
   padding: 20px;
   position: relative;
 }
@@ -113,11 +125,11 @@
   .leaderboard-section,
   .courses-section {
     flex: 1 1 100%; /* Full width on smaller screens */
-    margin: 10px 0; /* Equal top and bottom margins */
+    margin: 10px 0;
   }
 
   .dashboard-row {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 }
 
@@ -139,5 +151,143 @@
   }
   to {
     width: 100%; /* Adjust this based on your JavaScript calculation */
+  }
+}
+
+.learning-trend-chart {
+  /* Ensure there is no unnecessary margin at the bottom */
+  margin-bottom: 0; /* or reduce it to a smaller value like 10px */
+}
+
+.student-card-section {
+  margin-top: -270px; /* Adjusted margin */
+  padding: 20px; /* Add padding around the section */
+  background-color: #ffffff; /* White background to match other sections */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px var(--shadow-light);
+  border: 1px solid var(--border-color);
+}
+
+/* Increase width of StudentCardList */
+.student-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Increased gap between student cards */
+  padding: 30px; /* Adjusted padding for better spacing inside */
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px var(--shadow-light);
+  margin-bottom: 50px; /* Ensure space at the bottom to avoid overlapping with the next section */
+}
+
+
+/* Adjust student card dimensions */
+.student-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Hover effect for a professional look */
+.student-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px var(--shadow-dark);
+}
+
+/* Update profile picture size */
+.student-profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Align student name and score side by side */
+.student-details {
+  display: flex;
+  align-items: center; /* Align name and score horizontally */
+}
+
+.student-name {
+  font-weight: bold;
+  color: var(--font-color);
+  font-size: 1.4rem; /* Increase font size */
+  margin-right: 20px; /* Space between name and score */
+}
+
+.student-score {
+  color: var(--accent-color);
+  font-size: 1.5rem; /* Increase score font size */
+  font-weight: 600;
+}
+
+/* Adjust learn more button */
+.learn-more-button {
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 1.2rem;
+}
+
+.learn-more-button:hover {
+  background-color: #1e1f8f;
+}
+
+/* Responsive design for StudentCardList and student cards */
+@media (max-width: 768px) {
+  .student-card-list {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Ensures adequate gap between cards on mobile */
+    margin-top: 30px; /* Add margin on top to prevent overlap on smaller devices */
+  }
+  .student-card-section {
+    margin-top: 40px; /* Adjust margin for smaller screens */
+  }
+
+  .student-card {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .student-name {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  .student-score {
+    font-size: 1.3rem;
+  }
+
+  .student-profile-pic {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .student-card {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .student-name {
+    font-size: 1.2rem;
+  }
+
+  .student-score {
+    font-size: 1.2rem;
   }
 }
