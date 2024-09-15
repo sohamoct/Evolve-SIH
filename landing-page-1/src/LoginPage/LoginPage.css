@@ -1,12 +1,4 @@
-/* Apply background image to the entire viewport */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: url('https://img.freepik.com/free-vector/winter-light-blue-gradient-vector-background_53876-126054.jpg?t=st=1726227376~exp=1726230976~hmac=fd980b2d479285e9c95a3b327136dc0667a516a3a8b422bcc413674e7ff4bf9d&w=900') no-repeat center center fixed;
-    background-size: cover;
-    overflow: auto; /* Allow scrolling */
-  }
+
   
   /* Container for the background image and overlay */
   .background-container {

@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './HomePage/Navbar';
@@ -8,13 +7,15 @@ import HighlightSection from './HomePage/HighlightSection';
 import Footer from './HomePage/Footer';
 import Carousel from './HomePage/Carousel';
 import LoginPage from './LoginPage/LoginPage'; 
-import SignUp from './SignUp/SignUp'; // Import the SignUp component
+import SignUp from './SignUp/SignUp'; 
+import InstructorDashboard from './InstructorDashboard/InstructorDashboard'; // Import the InstructorDashboard component
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        {/* Home page route */}
         <Route
           path="/"
           element={
@@ -34,8 +35,16 @@ function App() {
             </div>
           }
         />
-        <Route path="/login" element={<LoginPage />} /> {/* Add the route for LoginPage */}
-        <Route path="/signup" element={<SignUp />} /> {/* Add the route for SignUp */}
+
+        {/* Login page route */}
+        <Route path="/login" element={<LoginPage />} /> 
+        
+        {/* Sign up page route */}
+        <Route path="/signup" element={<SignUp />} /> 
+        
+        {/* Instructor Dashboard route */}
+        <Route path="/instructor-dashboard" element={<InstructorDashboard />} /> {/* Add InstructorDashboard */}
+        
         {/* Add more routes as needed */}
       </Routes>
     </Router>
