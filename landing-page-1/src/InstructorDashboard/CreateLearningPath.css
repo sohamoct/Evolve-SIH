@@ -1,0 +1,22 @@
+/* CreateLearningPath.css */
+.create-learning-path {
+    padding: 20px;
+  }
+  
+  .learning-path {
+    margin-bottom: 30px;
+  }
+  
+  .add-learning-path-btn {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-learning-path-btn:hover {
+    background-color: #2980b9;
+  }
