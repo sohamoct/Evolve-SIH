@@ -1,179 +1,139 @@
-/* src/components/Navbar.css */
+/* General Navbar Styling */
 .navbar {
-    background-color: #2c3e50;
-    position: fixed; /* Fixes the navbar to the top */
-    top: 0;
-    width: 100%; /* Make sure it spans the full width */
-    z-index: 1000; /* Ensure it stays above other content */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
-  }
-  
-  .navbar-brand img {
-    max-height: 48px; /* Adjust as necessary for your logo */
-  }
-  
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.logo {
+  max-height: 48px;
+}
+
+.search-bar {
+  width: 500px;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.nav-item {
+  margin: 0 20px;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  font-weight: normal;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #bdc3c7;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Notification Icon */
+.notification-icon {
+  cursor: pointer;
+}
+
+.notification-icon i {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-icon .new-notifications {
+  color: yellow;
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Notification Dropdown */
+.notifications-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 50px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Profile Picture */
+.profile-picture {
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-popup {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transform: scale(1.1);
+}
+
+.popup-profile-pic {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile-popup img {
+  transition: transform 0.3s ease;
+}
+
+.profile-popup:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
   .navbar-nav {
-    margin: 0 auto; /* Center the navbar links */
-  }
-  
-  .nav-item {
-    margin: 0 20px; /* Increased margin for better spacing */
-  }
-  .navbar .d-flex a {
-    margin-left: 15px; /* Adjust the value for more or less spacing */
-  }
-  .nav-link {
-    color: #ecf0f1; /* Light color for text, making it stand out on dark background */
-    font-weight: normal; /* Normal weight for all links */
-    text-decoration: none; /* Remove underline from links */
-    transition: color 0.3s ease; /* Smooth transition for color changes */
-  }
-  
-  .nav-link.active {
-    color: #ffffff; /* Brighter color for active link */
-    font-weight: bold; /* Bold font for active link */
-  }
-  
-  .nav-link:hover {
-    color: #bdc3c7; /* Lighter gray color for hover to contrast against dark background */
-  }
-  
-  /* Optional: Adding a focus style for better accessibility */
-  .nav-link:focus {
-    color: #bdc3c7;
-    outline: none; /* Remove default outline for better visual control */
-  }
-  
-  /* Primary Button Styles */
-  .btn-primary {
-    background-color: #3498db; /* Bright blue for the primary button */
-    border-color: #3498db;
-    color: #ffffff;
-    height: 3rem;
-    padding: 0.75rem 1.5rem; /* Padding for the button */
-    border-radius: 25px; /* Rounded button corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
-    text-decoration: none; /* Remove underline from links */
-    display: inline-block; /* Ensure button behaves like a button */
-  }
-  
-  .btn-primary:hover {
-    background-color: #2980b9; /* Darker blue on hover for a more dynamic effect */
-    border-color: #2980b9;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-  }
-  
-  /* Outline Light Button Styles */
-  /* Login Button Styles */
-  .btn-outline-light {
-    position: relative; /* Required for positioning the pseudo-element */
-    border-color: #ecf0f1;
-    color: black; /* Initial black color for text */
-    background-color: white; /* Initial white background */
-    padding: 0.75rem 1.5rem; /* Padding for the button */
-    border-radius: 25px; /* Rounded button corners */
-    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
-    transition: color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition for text color and shadow */
-    text-decoration: none; /* Remove underline from links */
-    display: inline-block; /* Ensure button behaves like a button */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for initial state */
-  }
-  
-  .btn-outline-light::before {
-    content: '';
-    position: absolute;
-    top: 100%; /* Start outside the button */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #778dff; /* Filling color */
-    /* transition: top 0.2s ease-in-out; Smooth transition for the filling effect */
-    transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: 0; /* Place it behind the text */
-  }
-  
-  .btn-outline-light:hover::before {
-    top: 0; /* Moves the pseudo-element to fill the button */
-  }
-  
-  .btn-outline-light:hover {
-    color: white; /* Change text color to white on hover */
-    border-color: #778dff; /* Change border color to match background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  }
-  
-  .btn-outline-light span {
-    position: relative;
-    z-index: 1; /* Ensure text stays above the background color */
-  }
-  
-  /* Login Button Styles */
-  .btn-login {
-    background-color: #e74c3c; /* Bright red for the login button */
-    border-color: #e74c3c; /* Match border color to the background */
-    color: #ffffff; /* White text color */
-    padding: 0.75rem 1.5rem; /* Padding for the button */
-    border-radius: 25px; /* Rounded button corners */
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
-    text-decoration: none; /* Remove underline from links */
-    display: inline-block; /* Ensure button behaves like a button */
-  }
-  
-  .btn-login:hover {
-    background-color: #c0392b; /* Darker red on hover for a more dynamic effect */
-    border-color: #c0392b; /* Match border color to the background */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    text-align: center;
   }
 
-  .notification-icon:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+  .nav-item {
+    margin: 10px 0;
   }
-  
-  .profile-popup {
-    transform: scale(1.1); /* Slight zoom effect */
+
+  .search-bar {
+    width: 100%;
   }
-  
-  .profile-popup img {
-    transition: transform 0.3s ease; /* Smooth transition for profile image */
+
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23fff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E');
   }
-  
-  .profile-popup:hover img {
-    transform: scale(1.1); /* Slight zoom effect on profile picture */
+
+  .collapse.navbar-collapse {
+    background-color: #2c3e50;
+    padding: 15px 0;
   }
-  @media (max-width: 767px) {
-    .navbar-nav {
-      text-align: center; /* Center align menu items on mobile */
-    }
-  
-    .nav-item {
-      margin: 10px 0; /* Increase vertical spacing on mobile */
-    }
-  
-  /* Ensure Bootstrap CSS is properly loaded */
-    /* Ensure Bootstrap CSS is properly loaded */
-      .navbar-toggler-icon {
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23fff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E'); /* White hamburger icon */
-      }
-  
-      /* Optional: If needed, you can adjust the size of the toggler */
-      .navbar-toggler {
-        border: none; /* Remove default border */
-      }
-  
-    .collapse.navbar-collapse {
-      background-color: #2c3e50; /* Same as navbar background for consistency */
-      padding: 15px 0; /* Add padding for better spacing */
-    }
-  
-    .navbar-nav .nav-link {
-      font-size: 1.2rem; /* Larger text size for better readability on mobile */
-      padding: 10px 0; /* Add vertical padding */
-    }
-  
-    .btn-primary {
-      width: 100%; /* Full-width button on mobile for better touch accessibility */
-      text-align: center; /* Center text inside the button */
-    }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 10px 0;
   }
+}

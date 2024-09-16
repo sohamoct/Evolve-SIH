@@ -1,0 +1,55 @@
+/* src/InstructorProfile/ProfilePage.css */
+.profile-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-photo-section {
+    text-align: center;
+    padding: 50px;
+  }
+
+.chooseFile {
+    text-align: center;
+    justify-content: space-between;
+}
+  
+  .profile-photo-section img {
+    width: 150px;
+    height: 150px;
+    justify-content: space-between;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details label {
+    margin-top: 10px;
+  }
+  
+  .profile-details input,
+  .profile-details select,
+  .profile-details textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  .profile-details button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  

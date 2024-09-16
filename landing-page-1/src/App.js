@@ -12,6 +12,7 @@ import Carousel from './HomePage/Carousel';
 import LoginPage from './LoginPage/LoginPage'; 
 import SignUp from './SignUp/SignUp'; 
 import InstructorDashboard from './InstructorDashboard/InstructorDashboard'; // Import the InstructorDashboard component
+import ProfilePage from './InstructorDashboard/ProfilePage'
 
 // Component to conditionally render Navbar
 const Layout = ({ children }) => {
@@ -67,6 +68,15 @@ function App() {
             </Layout>
           }
         />
+
+        <Route
+          path="/instructor-profile"
+          element={
+            <Layout>
+              <ProfilePage />
+            </Layout>
+          }
+        />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
@@ -74,3 +84,5 @@ function App() {
 }
 
 export default App;
+
+
