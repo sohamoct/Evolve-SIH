@@ -1,0 +1,16 @@
+/* UploadResources.css */
+.upload-resources {
+    padding: 20px;
+  }
+  
+  .upload-section {
+    margin-bottom: 20px;
+  }
+  
+  .document-type-selection {
+    margin-top: 10px;
+  }
+  
+  .document-type-selection label {
+    margin-right: 15px;
+  }

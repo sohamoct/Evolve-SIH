@@ -12,7 +12,9 @@ import Carousel from './HomePage/Carousel';
 import LoginPage from './LoginPage/LoginPage'; 
 import SignUp from './SignUp/SignUp'; 
 import InstructorDashboard from './InstructorDashboard/InstructorDashboard'; // Import the InstructorDashboard component
-import ProfilePage from './InstructorDashboard/ProfilePage'
+import ProfilePage from './InstructorDashboard/ProfilePage';
+import UploadResources from './InstructorDashboard/UploadResources'; // Import UploadResources component
+import CreateLearningPath from './InstructorDashboard/CreateLearningPath'; // Import CreateLearningPath component
 
 // Component to conditionally render Navbar
 const Layout = ({ children }) => {
@@ -30,7 +32,6 @@ const Layout = ({ children }) => {
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         {/* Home page route */}
         <Route
@@ -77,6 +78,27 @@ function App() {
             </Layout>
           }
         />
+
+        {/* Upload Resources Page */}
+        <Route
+          path="/upload-resources"
+          element={
+            <Layout>
+              <UploadResources />
+            </Layout>
+          }
+        />
+
+        {/* Create Learning Path Page */}
+        <Route
+          path="/create-learning-path"
+          element={
+            <Layout>
+              <CreateLearningPath />
+            </Layout>
+          }
+        />
+
         {/* Add more routes as needed */}
       </Routes>
     </Router>
@@ -84,5 +106,3 @@ function App() {
 }
 
 export default App;
-
-
