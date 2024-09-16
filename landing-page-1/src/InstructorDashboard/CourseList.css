@@ -1,18 +1,82 @@
-/* src/components/CourseList.css */
+/* Container for the entire course list section */
+.your-all-courses {
+  background-color: #f1f3f5; /* Light background color for the entire section */
+  padding: 10px; /* Reduced padding around the section */
+  border-radius: 6px; /* Slightly reduced border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  margin: 10px auto; /* Reduced margin above and below the section */
+  max-width: 720px; /* Further reduced maximum width for the section */
+}
 
+/* Section title styling */
+.section-title {
+  background-color: #fff; /* White background for the title */
+  padding: 10px; /* Padding around the title */
+  border-radius: 5px; /* Rounded corners for the background */
+  font-size: 18px; /* Font size for the title */
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Dark color for the title */
+  margin-bottom: 10px; /* Space below the title */
+  text-align: center; /* Center-align the title text */
+}
+
+/* Container for the course list */
 .course-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    .course-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+  padding: 0; /* Remove padding to avoid extra space around the list */
+  display: flex; /* Change from grid to flex */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  gap: 10px; /* Further reduced space between cards */
+}
+
+/* Styling for individual course cards */
+.course-card {
+  display: flex;
+  flex-direction: row; /* Stack content horizontally */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Further reduced padding */
+  border: 1px solid #ddd;
+  background-color: #fff; /* Background color for better visibility */
+  border-radius: 5px; /* Slightly reduced border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Further reduced shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+  width: 80%; /* Further reduced width as a percentage of the container */
+  max-width: 500px; /* Further reduced maximum width for the card */
+  height: auto; /* Adjust height automatically based on content */
+}
+
+/* Add hover effect to course cards */
+.course-card:hover {
+  transform: translateY(-2px); /* Lift card slightly on hover */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Thumbnail image for each course card */
+.course-card img {
+  width: 60px; /* Further reduced width for smaller image */
+  height: 60px; /* Further reduced height for smaller image */
+  border-radius: 4px; /* Slightly reduced border-radius for the image */
+  object-fit: cover; /* Ensure image covers the container without distortion */
+  margin-right: 10px; /* Further reduced space between image and text */
+}
+
+/* Styling for course titles and descriptions */
+.course-card-content h3 {
+  margin: 0;
+  font-size: 14px; /* Further reduced font size */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Darker color for title */
+}
+
+.course-card-content p {
+  margin: 3px 0 0 0; /* Further reduced margin */
+  font-size: 9px; /* Further reduced font size */
+  color: #666; /* Subtle color for description */
+}
+
+/* Arrow indicating more details */
+.arrow {
+  font-size: 14px; /* Further reduced font size */
+  color: #007bff; /* Color of the arrow */
+}

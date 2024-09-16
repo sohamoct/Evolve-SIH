@@ -291,3 +291,65 @@
     font-size: 1.2rem;
   }
 }
+.course-list {
+  padding: 20px;
+}
+
+.course-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.course-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.course-detail {
+  padding: 20px;
+}
+
+.topic-row {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.zone {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.student-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-list li {
+  display: flex;
+  align-items: center;
+}
+
+.student-list li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
