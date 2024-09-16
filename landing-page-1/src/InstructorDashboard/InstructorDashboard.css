@@ -18,11 +18,11 @@
 
 .dashboard-row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px; /* Increased margin to ensure space between rows */
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows components to wrap if necessary */
+  justify-content: space-between; /* Ensures space between components */
+  gap: 20px; /* Adds uniform spacing between components */
+  padding: 10px;
 }
-
 
 .learning-trend-chart,
 .learner-distribution-chart,
@@ -160,14 +160,13 @@
 }
 
 .student-card-section {
-  margin-top: -270px; /* Adjusted margin */
-  padding: 20px; /* Add padding around the section */
-  background-color: #ffffff; /* White background to match other sections */
+  /* margin-top: -270px; */
+  padding: 20px;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 8px 16px var(--shadow-light);
   border: 1px solid var(--border-color);
 }
-
 /* Increase width of StudentCardList */
 .student-card-list {
   display: grid;

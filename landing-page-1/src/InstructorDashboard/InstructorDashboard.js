@@ -36,22 +36,21 @@ const InstructorDashboard = () => {
       </div>
 
       <div className="dashboard-row">
-        {/* Fit StudentCardList below charts */}
         <div className="student-card-section">
           <h3>Enrolled Students</h3> {/* Moved title inside the section */}
           <StudentCardList />
         </div>
-      </div>
 
-      <div className="course-section">
-        {selectedCourse ? (
-          <>
-            <button onClick={handleBackToList} className="back-button">Back to Course List</button>
-            <CourseDetail courseId={selectedCourse} />
-          </>
-        ) : (
-          <CourseList onCourseClick={handleCourseClick} />
-        )}
+        <div className="course-section">
+          {selectedCourse ? (
+            <>
+              <button onClick={handleBackToList} className="back-button">Back to Course List</button>
+              <CourseDetail courseId={selectedCourse} />
+            </>
+          ) : (
+            <CourseList onCourseClick={handleCourseClick} />
+          )}
+        </div>
       </div>
     </div>
   );

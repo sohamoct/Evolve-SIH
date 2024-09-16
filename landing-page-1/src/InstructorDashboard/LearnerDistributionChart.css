@@ -1,20 +1,20 @@
 .learner-distribution {
   border: 1px solid #d1d9e6;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 100%;
-  margin: 15% auto;
+  margin: 15% auto; /* Keeping the top margin the same */
   opacity: 0; /* Start hidden for animation */
   transform: translateY(20px); /* Start offset for animation */
   animation: fadeInUp 1s ease-out forwards; /* Animation for fade-in and slide-up */
 }
 
 .learner-distribution h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.4rem; /* Slightly reduced font size */
+  margin-bottom: 10px; /* Reduced margin */
   color: #1e3a8a; /* Dark Blue */
   opacity: 0; /* Start hidden for animation */
   transform: translateY(10px); /* Start offset for animation */
@@ -22,9 +22,9 @@
 }
 
 .learner-distribution canvas {
-  width: 100% !important;
+  width: 90% !important; /* Reduced width for a more compact view */
   height: auto !important;
-  max-width: 500px;
+  max-width: 400px; /* Reduced max-width to decrease overall height */
   margin: 0 auto;
   opacity: 0; /* Start hidden for animation */
   transform: scale(0.9); /* Start scaled down for animation */
@@ -33,17 +33,21 @@
 
 @media (max-width: 768px) {
   .learner-distribution {
-    padding: 15px;
+    padding: 10px; /* Further reduced padding for smaller screens */
   }
 
   .learner-distribution h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem; /* Adjusted font size */
   }
 }
 
 @media (max-width: 480px) {
   .learner-distribution h3 {
-    font-size: 1rem;
+    font-size: 1rem; /* Kept the same */
+  }
+
+  .learner-distribution canvas {
+    max-width: 350px; /* Reduced width for smaller screens */
   }
 }
 

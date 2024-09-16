@@ -1,87 +1,130 @@
 .student-card-list {
-  display: grid; /* Use grid layout for better control over card arrangement */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically adjust based on screen size */
-  gap: 20px; /* Space between the cards */
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 30px;
   background-color: var(--bg-color);
   border-radius: 10px;
   box-shadow: 0 8px 16px var(--shadow-light);
+  margin-bottom: 50px;
 }
 
 .student-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 25px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 8px 16px var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
 }
 
 .student-card:hover {
-  transform: scale(1.05); /* Slight scale on hover */
-  box-shadow: 0 12px 24px var(--shadow-dark); /* Darker shadow on hover */
-}
-
-.student-info {
-  display: flex;
-  align-items: center;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px var(--shadow-dark);
 }
 
 .student-profile-pic {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .student-details {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .student-name {
   font-weight: bold;
   color: var(--font-color);
+  font-size: 1.4rem;
+  margin-right: 20px;
 }
 
 .student-score {
   color: var(--accent-color);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
-.student-indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.student-indicator.green {
-  background-color: #4caf50;
-}
-
-.student-indicator.red {
-  background-color: #f44336;
-}
-
-.student-indicator.yellow {
-  background-color: #ffeb3b;
-}
-
 .learn-more-button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  grid-column: 1 / -1; /* Make the button span across the grid */
-  justify-self: center; /* Center the button */
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 1.2rem;
 }
 
 .learn-more-button:hover {
   background-color: #1e1f8f;
+}
+
+.student-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+@media (max-width: 768px) {
+  .student-card-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .student-card {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .student-name {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  .student-score {
+    font-size: 1.3rem;
+  }
+
+  .student-profile-pic {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-card {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .student-name {
+    font-size: 1.2rem;
+  }
+
+  .student-score {
+    font-size: 1.2rem;
+  }
 }
