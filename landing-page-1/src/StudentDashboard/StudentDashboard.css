@@ -1,0 +1,102 @@
+/* General dashboard layout */
+.student-dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #f5f5f5; /* Adjust as needed */
+  }
+  
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust column layout */
+    grid-template-rows: auto;
+    gap: 10px; /* Minimal gap between items */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100vh - 80px); /* Adjust to ensure content doesn't overflow */
+    overflow-y: auto; /* Allow vertical scroll if content exceeds window height */
+  }
+  
+  .dashboard-content > * {
+    background-color: white; /* Consistent background color for all components */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .dashboard-content {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .dashboard-content {
+      grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+  }
+  
+  /* Additional specific styles for each component if needed */
+  
+  /* Navbar container */
+  .student-dashboard .navbar {
+    height: 80px;
+    background-color: #283e4a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Example component-specific style adjustments (you can refine based on component size) */
+  .learning-time,
+  .status,
+  .quizzes,
+  .course-progress,
+  .course-list,
+  .learning-trend,
+  .badges {
+    min-height: 250px; /* Ensure that all components have a base minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .learning-time {
+    grid-column: span 1; /* Adjust span as needed */
+  }
+  
+  .course-progress {
+    grid-column: span 1;
+  }
+  
+  .status {
+    grid-column: span 1;
+  }
+  
+  .quizzes {
+    grid-column: span 1;
+  }
+  
+  .learning-trend {
+    grid-column: span 2;
+    height: 100%; /* Ensure it fits the available height */
+  }
+  
+  .badges {
+    grid-column: span 2;
+  }
+  
+  /* Responsive styles for various screen sizes */
+  @media (max-width: 600px) {
+    .dashboard-content {
+      grid-template-columns: 1fr; /* Single column for small screens */
+    }
+  }
+  

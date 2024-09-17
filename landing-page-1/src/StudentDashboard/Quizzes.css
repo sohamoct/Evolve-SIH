@@ -1,0 +1,35 @@
+.quizzes {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.quizzes h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quizzes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quizzes ul li {
+    margin: 5px 0;
+}
+
+.quizzes button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quizzes button:hover {
+    background-color: #2980b9;
+}

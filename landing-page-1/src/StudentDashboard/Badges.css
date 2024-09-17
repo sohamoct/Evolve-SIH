@@ -1,0 +1,82 @@
+.badges-container {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.badges-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recent-badge {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #eef4ff;
+    border: 2px solid #d9e8ff;
+}
+
+.recent-badge img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.badge-info {
+    text-align: center;
+}
+
+.badge-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.previous-badges-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.other-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.other-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 80px;
+}
+
+.other-badge img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.other-badge p {
+    font-size: 0.9rem;
+    text-align: center;
+}

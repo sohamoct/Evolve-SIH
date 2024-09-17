@@ -1,0 +1,26 @@
+.course-list {
+    background-color: #d6df6e;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.course-list h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-item {
+    background-color: #52af30;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: #3498db;
+    color: white;
+}

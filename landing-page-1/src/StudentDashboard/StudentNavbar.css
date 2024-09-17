@@ -1,0 +1,52 @@
+.student-navbar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c3a61;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-search {
+    width: 500px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    border: none;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons i {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.navbar-profile:hover .profile-dropdown {
+    display: block;
+}
