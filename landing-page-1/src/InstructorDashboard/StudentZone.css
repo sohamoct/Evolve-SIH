@@ -1,58 +1,105 @@
-/* General styles for the zone selection */
 .zone-selection {
-    padding: 20px;
-  }
-  
-  .zone-selection input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .zone-selection label {
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  
-  .zone-students {
-    margin-top: 20px;
-  }
-  
-  .zone-students h3 {
-    margin-bottom: 10px;
-  }
-  
-  .zone-students ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .zone-students li {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .zone-students li::before {
-    content: '•';
-    color: #333;
-    font-size: 1.2em;
-    margin-right: 10px;
-  }
-  
-  .zone-students li:last-child {
-    border-bottom: none;
-  }
-  
-  /* Styling for different zones */
-  .red {
-    background-color: red;
-  }
-  
-  .yellow {
-    background-color: yellow;
-  }
-  
-  .green {
-    background-color: green;
-  }
-  
+  padding: 20px;
+  background-color: #f1f3f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.zone-selection input[type="radio"] {
+  margin-right: 10px;
+}
+
+.zone-selection label {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.zone-students {
+  margin-top: 20px;
+}
+
+.zone-students h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.zone-students ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.zone-students li {
+  padding: 5px 0;
+}
+
+
+.zone-students li:last-child {
+  border-bottom: none;
+}
+
+.zone-students .red {
+  background-color: #ffcccc;
+}
+
+.zone-students .yellow {
+  background-color: #ffffcc;
+}
+
+.zone-students .green {
+  background-color: #ccffcc;
+}
+.zone-selection {
+  margin: 10px 0;
+}
+
+.zone-selection label {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.zone-students {
+  margin-top: 10px;
+}
+
+.zone-students ul {
+  list-style-type: none;
+}
+
+.zone-students ul li {
+  padding: 5px 0;
+}
+.student-zone {
+  margin-top: 20px;
+}
+
+.zone-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.zone-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #ddd;
+}
+
+.student-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.more-btn {
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
+}

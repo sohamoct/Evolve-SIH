@@ -1,0 +1,38 @@
+.course-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-top: -18rem;
+  width: 1025px; /* Default width for large desktops */
+}
+
+/* For devices with a max width of 1024px (like smaller laptops or tablets) */
+@media (max-width: 1024px) {
+  .course-content {
+    width: 690px; /* Adjust width for smaller devices */
+  }
+}
+
+/* For devices with a max width of 768px (like tablets and mobile phones) */
+@media (max-width: 768px) {
+  .course-content {
+    width: 100%; /* Make it responsive to take full width on smaller screens */
+    margin-top: 0; /* Adjust margin for better alignment on smaller screens */
+  }
+}
+
+.content-header {
+  font-size: 0.9em;
+  color: grey;
+}
+
+.add-content {
+  margin-top: 10px;
+}
+
+.add-btn, .cancel-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+}

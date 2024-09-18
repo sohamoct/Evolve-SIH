@@ -10,47 +10,46 @@ const InstructorDashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
 
   const handleCourseClick = (courseId) => {
-    setSelectedCourse(courseId);
+    setSelectedCourse(courseId); // Save the selected course ID
   };
 
   const handleBackToList = () => {
-    setSelectedCourse(null);
+    setSelectedCourse(null); // Reset selected course to go back to the list
   };
 
   return (
     <div className="instructor-dashboard">
-      <div className="dashboard-row">
-        <div className="learning-trend-chart">
-          <LearningTrendChart />
+      {/* First Row: Charts and total learners */}
+      <div className="learning-trend-chart">
+        <LearningTrendChart />
+      </div>
+      <div className="learner-distribution-chart">
+        <LearnerDistributionChart />
+      </div>
+      <div className="total-learners">
+        <h3>Total Learners</h3>
+        <div className="total-learners-bar-container">
+          <div className="total-learners-bar" style={{ width: `60%` }} /> {/* Replace with your calculation */}
         </div>
-        <div className="learner-distribution-chart">
-          <LearnerDistributionChart />
-        </div>
-        <div className="total-learners">
-          <h3>Total Learners</h3>
-          <div className="total-learners-bar-container">
-            <div className="total-learners-bar" style={{ width: `60%` }} /> {/* Replace with your calculation */}
-          </div>
-          <p>5102</p>
-        </div>
+        <p>5102</p>
       </div>
 
-      <div className="dashboard-row">
-        <div className="student-card-section">
-          <h3>Enrolled Students</h3> {/* Moved title inside the section */}
-          <StudentCardList />
-        </div>
+      {/* Second Row: Students and Courses */}
+      <div className="student-card-section">
+        <h3>Enrolled Students</h3>
+        <StudentCardList />
+      </div>
 
-        <div className="course-section">
-          {selectedCourse ? (
-            <>
-              <button onClick={handleBackToList} className="back-button">Back to Course List</button>
-              <CourseDetail courseId={selectedCourse} />
-            </>
-          ) : (
-            <CourseList onCourseClick={handleCourseClick} />
-          )}
-        </div>
+      <div className="course-section">
+        {selectedCourse ? (
+          <>
+            <button onClick={handleBackToList} className="back-button">Back to Course List</button>
+            {/* Pass the selected course ID to CourseDetail */}
+            <CourseDetail courseId={selectedCourse} />
+          </>
+        ) : (
+          <CourseList onCourseClick={handleCourseClick} />
+        )}
       </div>
     </div>
   );

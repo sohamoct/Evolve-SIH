@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import StudentZone from "./StudentZone";
+import './TopicDetail.css';
 
-const TopicDetail = ({ topic }) => {
+const TopicDetail = ({ topic, onZoneClick }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => setIsExpanded(!isExpanded);
@@ -14,11 +14,16 @@ const TopicDetail = ({ topic }) => {
       </div>
       {isExpanded && (
         <div className="expanded-topic">
-          <p>Red Zone: {topic.red}</p>
-          <p>Yellow Zone: {topic.yellow}</p>
-          <p>Green Zone: {topic.green}</p>
-          <button className="upload-path">Upload Learning Path</button>
-          <StudentZone />
+          <ul>
+            {topic.subtopics.map((subtopic, index) => (
+              <li key={index}>{subtopic}</li>
+            ))}
+          </ul>
+          <div className="zone-buttons">
+            <button className="zone-btn" onClick={() => onZoneClick('red')}>Red Zone</button>
+            <button className="zone-btn" onClick={() => onZoneClick('yellow')}>Yellow Zone</button>
+            <button className="zone-btn" onClick={() => onZoneClick('green')}>Green Zone</button>
+          </div>
         </div>
       )}
     </div>

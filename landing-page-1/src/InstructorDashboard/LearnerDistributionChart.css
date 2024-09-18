@@ -5,8 +5,7 @@
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 100%;
-  margin: 15% auto; /* Keeping the top margin the same */
+  max-width: 100%; /* Keeping the top margin the same */
   opacity: 0; /* Start hidden for animation */
   transform: translateY(20px); /* Start offset for animation */
   animation: fadeInUp 1s ease-out forwards; /* Animation for fade-in and slide-up */
