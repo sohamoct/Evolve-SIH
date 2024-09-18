@@ -27,11 +27,9 @@
 .learning-trend-chart,
 .learner-distribution-chart,
 .total-learners {
-  flex: 1 1 30%; /* Flex grow and shrink with a basis of 30% width */
-  margin: 10px;
-  min-width: 300px; /* Ensures content doesn't get too narrow */
-  box-sizing: border-box; /* Ensures padding and borders are included in the width */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scaling and shadow */
+  flex: 1; /* Allow elements to grow equally */
+  min-width: 300px; /* Minimum width for responsiveness */
+  box-sizing: border-box; /* Include padding and borders in width */
 }
 
 .total-learners:hover {
@@ -129,7 +127,12 @@
   }
 
   .dashboard-row {
-    flex-direction: column;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row; /* Layout items horizontally */
+    flex-wrap: wrap; /* Wrap items to the next line */
+    gap: 20px; /* Spacing between items */
+    padding: 10px;
   }
 }
 
@@ -345,10 +348,8 @@
 .instructor-dashboard {
   padding: 20px;
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  grid-template-rows: auto auto; /* Two rows: auto-sized */
-  grid-gap: 20px; /* Space between grid items */
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
   background-color: var(--bg-color);
 }
 
@@ -362,8 +363,13 @@
 
 .total-learners {
   grid-column: 3 / 4; /* Third column */
+  height: 250px; /* Fixed height for consistency */
 }
-
+.student-card-section,
+.courses-section {
+  flex: 1; /* Allow sections to grow equally */
+  min-width: 300px; /* Minimum width for responsiveness */
+}
 .student-card-section {
   grid-column: 1 / 3; /* Span across the first two columns */
 }
@@ -384,4 +390,29 @@
   .courses-section {
     grid-column: 1 / -1; /* Full-width on small screens */
   }
+}
+@media (max-width: 768px) {
+  .dashboard-row {
+    flex-direction: column; /* Stack rows vertically on small screens */
+  }
+  
+  .learning-trend-chart,
+  .learner-distribution-chart,
+  .total-learners,
+  .student-card-section,
+  .courses-section {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+}
+
+/* Additional Styles for Flexbox */
+.learning-trend-chart,
+.learner-distribution-chart,
+.total-learners {
+  margin-bottom: 20px; /* Space between flex items in the same row */
+}
+
+.student-card-section,
+.courses-section {
+  margin-top: 20px; /* Space above sections in the second row */
 }

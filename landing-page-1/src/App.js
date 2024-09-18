@@ -17,6 +17,7 @@ import ProfilePage from './InstructorDashboard/ProfilePage';
 import UploadResources from './InstructorDashboard/UploadResources'; // Import UploadResources component
 import CreateLearningPath from './InstructorDashboard/CreateLearningPath'; // Import CreateLearningPath component
 import StudentDashboard from './StudentDashboard/StudentDashboard'; // Import the StudentDashboard component
+import CourseDetail from './InstructorDashboard/CourseDetail'; // Import CourseDetail component
 
 // Component to conditionally render Navbar
 const Layout = ({ children }) => {
@@ -117,6 +118,12 @@ function App() {
           <Route
             path="/student-dashboard"
             element={<StudentDashboard />}
+          />
+
+          {/* Course Detail Page */}
+          <Route
+            path="/course/:courseId"
+            element={<CourseDetail />}
           />
 
           {/* Add more routes as needed */}

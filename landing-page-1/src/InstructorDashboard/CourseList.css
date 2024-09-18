@@ -1,6 +1,6 @@
 /* Container for the entire course list section */
 .your-all-courses {
-  background-color: #f1f3f5; /* Light background color for the entire section */
+  background-color: #ffffff; /* Light background color for the entire section */
   padding: 20px; /* Padding around the section */
   border-radius: 6px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
@@ -153,4 +153,12 @@
   .arrow {
     font-size: 12px; /* Adjust font size */
   }
+}
+.course-list {
+  padding: 0; /* Remove padding to avoid extra space around the list */
+  display: flex; /* Use flex for alignment */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  gap: 15px; /* Space between cards */
+  background-color: #f1f3f5;
 }

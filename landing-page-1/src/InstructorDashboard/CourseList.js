@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { courseData } from "../data";
-import "./CourseList.css"; // Import the CSS file
+import "./CourseList.css";
 
-const CourseList = () => {
+const CourseList = ({ onCourseClick }) => {
   const navigate = useNavigate();
 
   const handleCourseClick = (courseId) => {
-    navigate(`/course/${courseId}`); // Redirect to CourseDetail page
+    navigate(`/course/${courseId}`);
   };
 
   return (
@@ -18,7 +18,7 @@ const CourseList = () => {
           <div
             key={course.id}
             className="course-card"
-            onClick={() => handleCourseClick(course.id)} // Navigate to course detail on click
+            onClick={() => handleCourseClick(course.id)}
           >
             <img src={course.thumbnail} alt={course.title} />
             <div className="course-card-content">
