@@ -16,10 +16,14 @@ import ProfilePage from './InstructorDashboard/ProfilePage';
 import UploadResources from './InstructorDashboard/UploadResources'; // Import UploadResources component
 import CreateLearningPath from './InstructorDashboard/CreateLearningPath'; // Import CreateLearningPath component
 
+// Import the new CourseList and CourseDetail components
+import CourseList from './InstructorDashboard/CourseList';
+import CourseDetail from './InstructorDashboard/CourseDetail';
+
 // Component to conditionally render Navbar
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isInstructorRoute = location.pathname.includes('/instructor-dashboard'); // Check if route contains 'instructor'
+  const isInstructorRoute = location.pathname.includes('/instructor-dashboard') || location.pathname.includes('/course/'); // Instructor route check
 
   return (
     <>
@@ -99,6 +103,26 @@ function App() {
           }
         />
 
+        {/* Course List and Course Detail Routes */}
+        <Route
+          path="/instructor-courses"
+          element={
+            <Layout>
+              <CourseList />
+            </Layout>
+          }
+        />
+
+        {/* Dynamic route for course detail */}
+        <Route
+          path="/course/:courseId"
+          element={
+            <Layout>
+              <CourseDetail />
+            </Layout>
+          }
+        />
+        
         {/* Add more routes as needed */}
       </Routes>
     </Router>

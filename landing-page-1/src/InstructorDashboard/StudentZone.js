@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./StudentZone.css"; // Import the CSS file
+import "./StudentZone.css"; 
 
-const StudentZone = () => {
+const StudentZone = ({ onZoneClick }) => {
   const [selectedZone, setSelectedZone] = useState(null);
   const zoneStudents = {
     red: ["John Doe", "Jane Smith"],
@@ -9,32 +9,44 @@ const StudentZone = () => {
     green: ["Student A", "Student B"]
   };
 
+  const handleZoneChange = (zone) => {
+    setSelectedZone(zone);
+    onZoneClick(zone); // Call the passed function when a zone is selected
+  };
+
   return (
     <div className="zone-selection">
-      <input
-        type="radio"
-        name="zone"
-        value="red"
-        onChange={() => setSelectedZone("red")}
-      />
-      Red Zone
-      <input
-        type="radio"
-        name="zone"
-        value="yellow"
-        onChange={() => setSelectedZone("yellow")}
-      />
-      Yellow Zone
-      <input
-        type="radio"
-        name="zone"
-        value="green"
-        onChange={() => setSelectedZone("green")}
-      />
-      Green Zone
+      <label>
+        <input
+          type="radio"
+          name="zone"
+          value="red"
+          onChange={() => handleZoneChange("red")}
+        />
+        Red Zone
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="zone"
+          value="yellow"
+          onChange={() => handleZoneChange("yellow")}
+        />
+        Yellow Zone
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="zone"
+          value="green"
+          onChange={() => handleZoneChange("green")}
+        />
+        Green Zone
+      </label>
+
       {selectedZone && (
         <div className="zone-students">
-          <h3>{selectedZone} Zone Students</h3>
+          <h3>{selectedZone.charAt(0).toUpperCase() + selectedZone.slice(1)} Zone Students</h3>
           <ul>
             {zoneStudents[selectedZone].map((student, index) => (
               <li key={index}>{student}</li>

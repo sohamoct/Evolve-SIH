@@ -10,15 +10,16 @@ const InstructorDashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
 
   const handleCourseClick = (courseId) => {
-    setSelectedCourse(courseId);
+    setSelectedCourse(courseId); // Save the selected course ID
   };
 
   const handleBackToList = () => {
-    setSelectedCourse(null);
+    setSelectedCourse(null); // Reset selected course to go back to the list
   };
 
   return (
     <div className="instructor-dashboard">
+      {/* First Row: Charts and total learners */}
       <div className="dashboard-row">
         <div className="learning-trend-chart">
           <LearningTrendChart />
@@ -35,9 +36,10 @@ const InstructorDashboard = () => {
         </div>
       </div>
 
+      {/* Second Row: Students and Courses */}
       <div className="dashboard-row">
-        <div className="student-card-section">
-          <h3>Enrolled Students</h3> {/* Moved title inside the section */}
+        <div className="card-section">
+          <h3>Enrolled Students</h3>
           <StudentCardList />
         </div>
 
@@ -45,6 +47,7 @@ const InstructorDashboard = () => {
           {selectedCourse ? (
             <>
               <button onClick={handleBackToList} className="back-button">Back to Course List</button>
+              {/* Pass the selected course ID to CourseDetail */}
               <CourseDetail courseId={selectedCourse} />
             </>
           ) : (
