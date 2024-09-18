@@ -1,0 +1,17 @@
+.learning-trend {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.learning-trend h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.learning-trend canvas {
+    width: 100%;
+}
