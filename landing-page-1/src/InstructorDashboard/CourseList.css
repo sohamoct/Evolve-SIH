@@ -27,6 +27,7 @@
   flex-direction: column; /* Stack cards vertically */
   align-items: center; /* Center cards horizontally */
   gap: 15px; /* Space between cards */
+  background-color: #f1f3f5;
 }
 
 /* Styling for individual course cards */

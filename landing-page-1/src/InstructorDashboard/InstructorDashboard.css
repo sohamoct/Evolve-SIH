@@ -52,7 +52,7 @@
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  margin-top: 5.5%;
+  /* margin-top: 5.5%; */
   position: relative;
   overflow: hidden; /* Ensures animations stay within boundaries */
 }
@@ -341,4 +341,47 @@
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+}
+.instructor-dashboard {
+  padding: 20px;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: auto auto; /* Two rows: auto-sized */
+  grid-gap: 20px; /* Space between grid items */
+  background-color: var(--bg-color);
+}
+
+.learning-trend-chart {
+  grid-column: 1 / 2; /* First column */
+}
+
+.learner-distribution-chart {
+  grid-column: 2 / 3; /* Second column */
+}
+
+.total-learners {
+  grid-column: 3 / 4; /* Third column */
+}
+
+.student-card-section {
+  grid-column: 1 / 3; /* Span across the first two columns */
+}
+
+.courses-section {
+  grid-column: 3 / 4; /* Third column */
+}
+
+@media (max-width: 768px) {
+  .instructor-dashboard {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
+
+  .learning-trend-chart,
+  .learner-distribution-chart,
+  .total-learners,
+  .student-card-section,
+  .courses-section {
+    grid-column: 1 / -1; /* Full-width on small screens */
+  }
 }

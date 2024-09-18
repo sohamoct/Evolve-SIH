@@ -25,7 +25,7 @@ export const courseData = [
       id: 2,
       title: "Web Development Bootcamp",
       description: "Learn full-stack web development from scratch",
-      thumbnail: "https://imgs.search.brave.com/oDQEpb98mc1-w5W7sN9VEvDSgHlGE1pNlZpthsqBrVY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzJx/czBx/c3R5bGVzL2NvbW11bml0eUljb25fa3hjbXp5OWJ0MTM4MS5qcGc",
+      thumbnail: "https://imgs.search.brave.com/7bQOv5cCPmbPMYKRDplSN7R0i2F9Pa0Vt3ux-1a6mGU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzMwLzYwLzM1/LzM2MF9GXzIzMDYw/MzU1MF9CVEtabTVV/RncyTHhLTEYzTEJm/VTVzbjIyTDJJWWEz/Wi5qcGc",
       students: [
           { name: "Alice Johnson", zone: "green", profilePic: "path-to-pic" },
           { name: "Bob Brown", zone: "red", profilePic: "path-to-pic" }

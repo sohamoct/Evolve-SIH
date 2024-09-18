@@ -87,6 +87,7 @@
   .learning-trend {
     grid-column: span 2;
     height: 100%; /* Ensure it fits the available height */
+    margin: 0;
   }
   
   .badges {
