@@ -38,8 +38,8 @@ const StudentDashboard = () => {
                 <Quizzes quizzes={quizzes} />
                 <CourseProgress completionPercentage={completionPercentage} />
                 <CourseList courses={courses} onCourseSelect={setSelectedCourse} />
-                <LearningTrend trendData={trendData} />
                 <Badges recentBadge={recentBadge} otherBadges={otherBadges} />
+                <LearningTrend trendData={trendData} />
             </div>
         </div>
     );
