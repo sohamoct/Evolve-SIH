@@ -11,8 +11,8 @@ const LearnerDistributionChart = () => {
     datasets: [
       {
         data: [60, 15, 25],
-        backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384'],
-        hoverBackgroundColor: ['#36A2EB', '#FFCE56', '#FF6384'],
+        backgroundColor: ['#2dc937', '#FFFF00', '#FF0000'],
+        hoverBackgroundColor: ['#2dc937', '#FFFF00', '#FF0000'],
       },
     ],
   };

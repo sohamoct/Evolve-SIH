@@ -7,13 +7,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
+    max-width: 500px;
 }
 
 .badges-title {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    color: #1c3a61; /* Dark blue for better contrast */
 }
 
 .badge {
@@ -33,12 +33,19 @@
     padding: 20px;
     background-color: #eef4ff;
     border: 2px solid #d9e8ff;
+    transition: transform 0.3s; /* Add a transition for hover effect */
+}
+
+.recent-badge:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .recent-badge img {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Increased size for better visibility */
+    height: 80px; /* Increased size for better visibility */
     margin-bottom: 10px;
+    border: 2px solid #1c3a61; /* Add border for better contrast */
+    border-radius: 50%; /* Keep it rounded */
 }
 
 .badge-info {
@@ -46,13 +53,26 @@
 }
 
 .badge-info h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increase font size for title */
     margin-bottom: 5px;
+    color: #1c3a61; /* Dark blue color for the title */
+    font-weight: bold; /* Make the title bold */
+}
+
+.badge-info p {
+    font-size: 1rem; /* Increase font size for visibility */
+    margin: 5px 0; /* Add spacing above and below */
+    color: #333; /* Dark color for text */
+    font-weight: 500; /* Slightly bold to enhance visibility */
 }
 
 .previous-badges-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem; /* Increased font size */
+    margin: 15px 0 10px; /* Top and bottom margin for spacing */
+    color: #1c3a61; /* Dark blue color */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center; /* Center align the title */
+    text-decoration: underline; /* Underline for emphasis */
 }
 
 .other-badges {
@@ -66,17 +86,19 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    width: 80px;
+    width: 60px; /* Adjusted size for other badges */
 }
 
 .other-badge img {
-    width: 60px;
-    height: 60px;
+    width: 45px; /* Slightly larger size for other badges */
+    height: 45px; /* Slightly larger size for other badges */
     border-radius: 50%;
     margin-bottom: 5px;
+    border: 1px solid #1c3a61; /* Border for better contrast */
 }
 
 .other-badge p {
     font-size: 0.9rem;
     text-align: center;
+    color: #333; /* Dark color for text */
 }

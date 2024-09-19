@@ -1,19 +1,42 @@
 .learning-trend {
-    width: 300px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px; /* Add padding for space */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    min-height: 455px; /* Increased minimum height for the card */
 }
 
 .learning-trend h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increase font size for the heading */
+    color: #1c3a61; /* Dark blue for contrast */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
-.learning-trend canvas {
-    width: 100%;
-    height: 10%;
+.chart-container {
+    flex-grow: 1; /* Allow the chart to take available space */
+    height: 100%; /* Make the container take the full height */
+    display: flex; /* Ensure the chart respects the height */
+}
+
+.chart-container canvas {
+    width: 100% !important; /* Make canvas full width */
+    height: 100% !important; /* Ensure canvas takes full height */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .learning-trend {
+        padding: 15px; /* Reduce padding on smaller screens */
+        min-height: 350px; /* Adjust minimum height for smaller screens */
+    }
+
+    .learning-trend h3 {
+        font-size: 1.3rem; /* Adjust heading size for smaller screens */
+    }
+
+    .chart-container {
+        height: 250px; /* Adjust height for smaller screens */
+    }
 }

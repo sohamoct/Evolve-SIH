@@ -1,3 +1,4 @@
+// src/components/Badges.js
 import React from 'react';
 import './Badges.css';
 

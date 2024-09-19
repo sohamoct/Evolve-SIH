@@ -4,7 +4,6 @@ import StudentNavbar from './StudentNavbar';
 import LearningTime from './LearningTime';
 import Status from './Status';
 import Quizzes from './Quizzes';
-import CourseProgress from './CourseProgress';
 import Badges from './Badges';
 import CourseList from './CourseList';
 import LearningTrend from './LearningTrend';
@@ -21,13 +20,13 @@ const StudentDashboard = () => {
     const completionPercentage = 72;
     const recentBadge = {
         title: 'Top Performer',
-        imageUrl: 'https://via.placeholder.com/100',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJkl1XT1rg2qB26wcnkfNZhox8PAXJjKEmg&s',
     };
     const otherBadges = [
-        { title: 'Quick Learner', imageUrl: 'https://via.placeholder.com/80' },
+        { title: 'Quick Learner', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyhWKMm0rdYtWbpGmMRW7tSi6ViSB8AN-qJw&s' },
     ];
     const trendData = [2, 3, 5, 4, 6, 7, 4];
-    const courses = [{ name: 'Course 1' }, { name: 'Course 2' }];
+    const courses = [{ name: 'Deep Learning' }, { name: 'Image Processing' }, { name: 'Machine Learning' }];
 
     return (
         <div className="student-dashboard">
@@ -36,7 +35,6 @@ const StudentDashboard = () => {
                 <LearningTime totalTime={totalTime} />
                 <Status redCount={redCount} yellowCount={yellowCount} greenCount={greenCount} />
                 <Quizzes quizzes={quizzes} />
-                <CourseProgress completionPercentage={completionPercentage} />
                 <CourseList courses={courses} onCourseSelect={setSelectedCourse} />
                 <Badges recentBadge={recentBadge} otherBadges={otherBadges} />
                 <LearningTrend trendData={trendData} />

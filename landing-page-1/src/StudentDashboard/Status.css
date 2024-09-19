@@ -1,38 +1,59 @@
 .status {
-    background-color: #f1f1f1;
+    background-color: #ffffff; /* White background for contrast */
     padding: 20px;
-    height: 180px;
+    height: auto; /* Allow height to adjust based on content */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern look */
     text-align: left;
+    transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.status:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .status h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increased font size for headers */
+    margin-bottom: 15px;
+    color: #1c3a61; /* Dark blue color for headers */
 }
 
 .status-item {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0; /* Increased margin for better spacing */
 }
 
 .status-color {
-    width: 20px;
-    height: 20px;
+    width: 25px; /* Slightly larger color indicators */
+    height: 25px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px; /* Increased spacing for clarity */
 }
 
 .red {
-    background-color: red;
+    background-color: #e74c3c; /* Softer red for consistency */
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: #f1c40f; /* Softer yellow for consistency */
 }
 
 .green {
-    background-color: green;
+    background-color: #2ecc71; /* Softer green for consistency */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .status {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .status h3 {
+        font-size: 1.3rem; /* Slightly smaller header font size */
+    }
+
+    .status-item {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
 }
