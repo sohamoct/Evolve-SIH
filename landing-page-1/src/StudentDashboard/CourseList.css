@@ -1,26 +1,83 @@
 .course-list {
-    background-color: #d6df6e;
-    padding: 5px;
+    background-color: #d9e4ee; /* Light blue background for the entire course list */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    transition: box-shadow 0.3s; /* Smooth transition for shadow */
+}
+
+.course-list:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Shadow on hover for effect */
 }
 
 .course-list h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.75rem; /* Increased header size for emphasis */
+    color: #1c3a61; /* Dark blue color for header */
+    margin-bottom: 15px;
+    text-align: center; /* Center the header */
+    font-weight: bold; /* Make header bold */
 }
 
 .course-item {
-    background-color: #52af30;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Divider line */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background and transform change */
+    background-color: #ffffff; /* White background for course items */
+    border-radius: 8px; /* Rounded corners for items */
 }
 
 .course-item:hover {
-    background-color: #3498db;
-    color: white;
+    background-color: #eaf4ff; /* Light blue on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover for effect */
+}
+
+.course-image {
+    width: 60px; /* Slightly larger width for course image */
+    height: 60px; /* Slightly larger height for course image */
+    border-radius: 8px; /* More rounded corners */
+    margin-right: 15px; /* Space between image and text */
+    object-fit: cover; /* Ensure image covers the area nicely */
+    border: 2px solid #1c3a61; /* Border around the image for definition */
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Fill available space */
+    align-items: center;
+}
+
+.course-name {
+    font-size: 1.2rem; /* Course name font size */
+    color: #1c3a61; /* Dark blue color for text */
+    margin: 0; /* Remove default margin */
+    font-weight: 600; /* Make course name bold */
+}
+
+.chevron-icon {
+    font-size: 1.2rem; /* Chevron icon size */
+    color: #1c3a61; /* Match the theme color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .course-image {
+        width: 50px; /* Adjust image size for mobile */
+        height: 50px;
+    }
+
+    .course-name {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .chevron-icon {
+        font-size: 1rem; /* Adjust chevron icon size for mobile */
+    }
 }

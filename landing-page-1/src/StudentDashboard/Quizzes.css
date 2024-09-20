@@ -1,35 +1,70 @@
 .quizzes {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px; /* Add padding for space */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space */
+    min-height: 250px; /* Set minimum height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.quizzes:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
 }
 
 .quizzes h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increase font size for the heading */
+    color: #1c3a61; /* Dark blue for contrast */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
-.quizzes ul {
-    list-style: none;
-    padding: 0;
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    flex-grow: 1; /* Allow the list to grow and take available space */
 }
 
-.quizzes ul li {
-    margin: 5px 0;
+.quiz-item {
+    background-color: #f0f8ff; /* Light blue background for quiz items */
+    padding: 12px; /* Padding inside the quiz item */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    transition: transform 0.2s ease, background-color 0.3s; /* Smooth background and scale transition */
 }
 
-.quizzes button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.quiz-item:hover {
+    background-color: #eaf4ff; /* Darker blue on hover */
+    transform: scale(1.02); /* Slightly enlarge item on hover */
 }
 
-.quizzes button:hover {
-    background-color: #2980b9;
+.see-more-btn {
+    background-color: #1c3a61; /* Dark blue button */
+    color: white; /* White text for contrast */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the button */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    align-self: flex-start; /* Align button to the left */
+}
+
+.see-more-btn:hover {
+    background-color: #0a2d4c; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .quizzes {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    .see-more-btn {
+        width: 100%; /* Full width on smaller screens */
+    }
 }

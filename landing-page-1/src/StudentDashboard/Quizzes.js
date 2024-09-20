@@ -5,13 +5,15 @@ import './Quizzes.css';
 const Quizzes = ({ quizzes }) => {
     return (
         <div className="quizzes">
-            <h3>Quizzes</h3>
+            <h3>Upcoming Quizzes</h3>
             <ul>
                 {quizzes.slice(0, 3).map((quiz, index) => (
-                    <li key={index}>{quiz.title}</li>
+                    <li key={index} className="quiz-item">
+                        {quiz.title}
+                    </li>
                 ))}
             </ul>
-            <button>See More</button>
+            <button className="see-more-btn">See More</button>
         </div>
     );
 };

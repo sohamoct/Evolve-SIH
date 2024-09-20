@@ -1,11 +1,14 @@
 // src/components/StudentNavbar.js
 import React from 'react';
 import './StudentNavbar.css';
+import Logo from "../images/Logo.png";
 
 const StudentNavbar = () => {
     return (
         <div className="student-navbar">
-            <div className="navbar-logo">E-Volv</div>
+            <div className="navbar-logo">
+            <img src={Logo} alt="E-Volv Logo" />
+            </div>
             <input type="text" className="navbar-search" placeholder="Search" />
             <div className="navbar-icons">
                 <i className="fas fa-home"></i>

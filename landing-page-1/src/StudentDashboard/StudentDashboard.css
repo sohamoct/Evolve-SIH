@@ -11,9 +11,8 @@
 .dashboard-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Adjust column layout */
-  grid-template-rows: auto;
-  gap: 10px; /* Minimal gap between items */
-  padding: 20px;
+  gap: 10px; /* Increased gap between items for better visibility */
+  padding: 10px; /* Reduced padding around the grid */
   width: 100%;
   box-sizing: border-box;
   height: calc(100vh - 80px); /* Adjust to ensure content doesn't overflow */
@@ -22,13 +21,28 @@
 
 .dashboard-content > * {
   background-color: white; /* Consistent background color for all components */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Adjusted padding inside each card */
+  border-radius: 8px; /* Slightly reduced border radius for a sharper look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
   width: 100%; /* Ensure full width */
   box-sizing: border-box;
 }
 
+.badges-learning-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Make badges container wider */
+  gap: 50px; /* Consistent gap between badges and learning trend */
+  grid-column: span 3; /* Span full width */
+}
+
+.badges, .learning-trend {
+  min-height: 250px; /* Ensure both components have the same minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsive styles for various screen sizes */
 @media screen and (max-width: 1200px) {
   .dashboard-content {
     grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
@@ -52,7 +66,7 @@
   box-sizing: border-box;
 }
 
-/* Example component-specific style adjustments */
+/* Component-specific style adjustments */
 .learning-time,
 .status,
 .quizzes,
@@ -61,10 +75,9 @@
 .learning-trend,
 .badges {
   min-height: 250px; /* Ensure that all components have a base minimum height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: #f4f4f9;
+  padding: 15px; /* Consistent padding for all components */
+  border-radius: 8px; /* Consistent border radius */
 }
 
 .learning-time {
@@ -88,10 +101,11 @@
   height: 100%; /* Ensure it fits the available height */
   margin: 0;
   display: table-header-group;
+  height: auto;
 }
 
 .badges {
-  grid-column: span 2;
+  height: auto; /* Allow it to grow based on content */
 }
 
 /* Responsive styles for various screen sizes */
