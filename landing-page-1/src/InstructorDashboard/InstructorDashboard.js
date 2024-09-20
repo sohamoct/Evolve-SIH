@@ -16,14 +16,13 @@ const InstructorDashboard = () => {
   const handleCourseClick = (courseId) => {
     navigate(`/course/${courseId}`);
   };
-
   const handleBackToList = () => {
     navigate('/'); // Navigate back to the dashboard or course list page
   };
 
   return (
     <div className="instructor-dashboard">
-      <InstructorNavbar /> 
+      {/* <InstructorNavbar />  */}
       {/* Include the InstructorNavbar component */}
 
       <div className="dashboard-row">
