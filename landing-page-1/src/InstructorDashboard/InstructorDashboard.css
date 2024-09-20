@@ -10,7 +10,7 @@
 }
 
 .instructor-dashboard {
-  padding: 20px;
+
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color); /* Use variable */
@@ -23,7 +23,10 @@
   gap: 20px; /* Adds uniform spacing between components */
   padding: 10px;
 }
-
+.learning-trend{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .learning-trend-chart,
 .learner-distribution-chart,
 .total-learners {
