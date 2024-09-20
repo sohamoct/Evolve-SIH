@@ -1,10 +1,14 @@
 .personal-dashboard {
     width: 100%;
     padding: 20px;
-    background-color: #52c08b;
+    /* background-color: #52c08b; */
   }
   
   .personal-dashboard > * {
     margin-bottom: 30px;
   }
-  
+  .sec-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }

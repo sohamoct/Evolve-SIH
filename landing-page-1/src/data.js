@@ -2,7 +2,7 @@ export const courseData = [
   {
       id: 1,
       title: "Deep Learning Essentials",
-      description: "UI/UX Design & Graphic Design Tool.",
+      description: "Introduction to Deep Learning Fundamentals.",
       thumbnail: "https://imgs.search.brave.com/P9JYNldfEhOEkKeU-qCblxtcnr43v9_qrKi-XwFw82A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3JlZGx5LmNv/bS9pbWFnZXMvZjRm/MDhiNDUtYWEzOC00/MjQyLThiMDUtZGNk/YWM2ODExNTA0L0Rl/ZXBfTGVhcm5pbmdf/RXNzZW50aWFscy5w/bmc",
       students: [
           { name: 'Manish Sonawane', completed: 80, tests: 5, zone: 'Green', profilePic: "https://imgs.search.brave.com/P9JYNldfEhOEkKeU-qCblxtcnr43v9_qrKi-XwFw82A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3JlZGx5LmNv/bS9pbWFnZXMvZjRm/MDhiNDUtYWEzOC00/MjQyLThiMDUtZGNk/YWM2ODExNTA0L0Rl/ZXBfTGVhcm5pbmdf/RXNzZW50aWFscy5w/bmc" },

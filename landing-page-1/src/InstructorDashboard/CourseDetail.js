@@ -49,7 +49,7 @@ const CourseDetail = () => {
       <div className="course-detail-content">
         {/* Course Information */}
         <div className="course-info">
-          <img src={course.thumbnail} alt={course.title} className="course-image" />
+          <img src={course.thumbnail} alt={course.title} className="inst-course-image" />
           <div className="course-info-content">
             {isEditing ? (
               <>

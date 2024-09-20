@@ -63,7 +63,7 @@
 }
 
 /* Additional styling */
-.course-image {
+.inst-course-image {
   width: 200px; /* Image is now 200px */
   height: 200px;
   object-fit: cover;

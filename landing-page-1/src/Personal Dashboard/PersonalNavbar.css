@@ -1,5 +1,5 @@
 /* General styles for the navbar */
-.navbar {
+.personal-navbar {
     /* height: 70px;
     display: flex;
     align-items: center;
@@ -7,12 +7,17 @@
     background-color: #2c3e50;
     color: white; */
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
     background-color: #2c3e50;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: opacity 0.3s ease;
+    height: 70px;
+    /* gap: 152px; */
   }
   
   /* Styles for the logo */
@@ -22,7 +27,7 @@
   
   /* Search bar styling */
   .navbar-search input {
-    width: 500px;
+    width:max-content;
     padding: 5px;
     border-radius: 20px;
     border: none;

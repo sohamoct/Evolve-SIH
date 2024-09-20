@@ -16,7 +16,7 @@ const PersonalNavbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="personal-navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Logo" />
       </div>

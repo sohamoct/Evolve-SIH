@@ -5,8 +5,7 @@ import YourCourses from './YourCourses';
 import RecommendCourses from './RecommendCourses';
 import QuizzesGiven from './QuizzesGiven';
 import DiscussionSection from './DiscussionSection';
-
-
+import LearningTime from './Learntime'; // Import as a component
 import './PersonalDashboard.css'; // Custom styles for the dashboard
 
 const PersonalDashboard = () => {
@@ -17,7 +16,11 @@ const PersonalDashboard = () => {
 
       {/* Content below Navbar */}
       <RecentCourse />
+      <div className='sec-row'>
       <YourCourses />
+      <LearningTime /> {/* Use as a component */}
+      </div>
+      
       <RecommendCourses />
       <QuizzesGiven />
       <DiscussionSection />
