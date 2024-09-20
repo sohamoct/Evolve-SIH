@@ -17,9 +17,9 @@
 }
 
 .dashboard-row {
-  display: flex;
-  flex-wrap: wrap; /* Allows components to wrap if necessary */
-  justify-content: space-between; /* Ensures space between components */
+  display: grid;
+  align-items: start;
+  justify-content: space-between;
   gap: 20px; /* Adds uniform spacing between components */
   padding: 10px;
 }
@@ -346,8 +346,9 @@
   margin-right: 10px;
 }
 .instructor-dashboard {
+  /* width: max-content; */
   padding: 20px;
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column; /* Stack rows vertically */
   background-color: var(--bg-color);
@@ -415,4 +416,22 @@
 .student-card-section,
 .courses-section {
   margin-top: 20px; /* Space above sections in the second row */
+}
+.dashboard-row-new{
+    display: flex;
+    /* max-width: fit-content; */
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+@media (max-width: 768px) {
+  .dashboard-row-new {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically on small screens */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+  }
 }

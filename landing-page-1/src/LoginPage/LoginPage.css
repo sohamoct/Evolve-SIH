@@ -90,10 +90,11 @@
   }
   
   .form-control {
-    border-radius: 5px;
+    display: flex;
+    border-radius: 10px;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     padding-right: 40px; /* Ensure there's space for the icon */
   }
   

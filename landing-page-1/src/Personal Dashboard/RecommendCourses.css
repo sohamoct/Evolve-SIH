@@ -5,8 +5,9 @@
   
   .course-list {
     display: flex;
+    width: fit-content;
     overflow-x: scroll;
-    background-color: #30ceb6;
+    background-color: #ffffff;
   }
   
   .course-card {
@@ -17,5 +18,15 @@
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    width: 400px;
+    margin-right: 15px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
   }
   

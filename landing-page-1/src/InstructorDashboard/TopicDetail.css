@@ -67,4 +67,124 @@
     padding: 8px;
     cursor: pointer;
   }
-  
+  /* Styling for the zone buttons */
+.zone-buttons {
+  margin-top: 10px;
+}
+
+.zone-btn {
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.zone-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Styling for the learning path buttons */
+.learning-path-buttons {
+  margin-top: 20px;
+}
+
+.path-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.path-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Additional styling for button layout */
+.learning-path-buttons button:last-child {
+  margin-right: 0;
+}
+/* Zone button selected state */
+.zone-btn.selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+.student-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.zone-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.path-btn {
+  padding: 8px 16px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.path-btn:hover {
+  background-color: #0056b3;
+}
+/* Styling for the zone buttons */
+.zone-buttons {
+  margin-top: 10px;
+}
+
+.zone-btn {
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the zone button when hovered */
+.zone-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Zone button selected state */
+.zone-btn.selected {
+  background-color: #778dff; /* Change to the selected color */
+  color: #fff;
+  border-color: #778dff;
+}
+
+/* Transition effect for background color */
+.zone-btn {
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}

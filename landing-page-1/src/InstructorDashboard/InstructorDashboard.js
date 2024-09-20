@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
+import { useNavigate } from 'react-router-dom';
 import LearningTrendChart from './LearningTrendChart';
 import LearnerDistributionChart from './LearnerDistributionChart';
 import StudentCardList from './StudentCardList';
 import CourseList from './CourseList'; 
 import CourseDetail from './CourseDetail'; // Adjust the path as needed
+import InstructorNavbar from './InstructorNavbar'; // Import the InstructorNavbar component
 
 import './InstructorDashboard.css';
 
 const InstructorDashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
-  const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate();
 
   const handleCourseClick = (courseId) => {
-    navigate(`/course/${courseId}`); // Redirect to CourseDetail page
+    navigate(`/course/${courseId}`);
   };
 
   const handleBackToList = () => {
@@ -22,6 +23,9 @@ const InstructorDashboard = () => {
 
   return (
     <div className="instructor-dashboard">
+      <InstructorNavbar /> 
+      {/* Include the InstructorNavbar component */}
+
       <div className="dashboard-row">
         <div className="learning-trend-chart">
           <LearningTrendChart />
@@ -38,7 +42,7 @@ const InstructorDashboard = () => {
         </div>
       </div>
 
-      <div className="dashboard-row">
+      <div className="dashboard-row-new">
         <div className="student-card-section">
           <h3>Enrolled Students</h3>
           <StudentCardList />

@@ -1,5 +1,6 @@
 /* Container for the entire course list section */
 .your-all-courses {
+  min-width: fit-content;
   background-color: #ffffff; /* Light background color for the entire section */
   padding: 20px; /* Padding around the section */
   border-radius: 6px; /* Rounded corners */

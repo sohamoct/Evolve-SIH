@@ -139,7 +139,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './InstructorNavbar.css'; // Importing the updated CSS
 import logo from '../images/Logo.png';
-import profilePic from '../images/profilePic.jpg';
+import profilePic from '../images/TrackLearning.png';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 
 const InstructorNavbar = () => {
@@ -153,20 +153,20 @@ const InstructorNavbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
+    <nav className="instructor-navbar navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="instructor-container container-fluid">
         {/* Brand Logo */}
         <Link className="navbar-brand" to="/">
-          <img src={logo} alt="E-Volv Logo" className="logo" />
+          <img src={logo} alt="E-Volv Logo" className="instructor-logo" />
         </Link>
 
         {/* Search Bar */}
-        <form className="d-flex ms-3 search-bar">
+        <form className="d-flex ms-3 instructor-search-bar">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         </form>
 
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="instructor-navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
@@ -180,41 +180,41 @@ const InstructorNavbar = () => {
           </ul>
 
           {/* Notification & Profile */}
-          <div className="d-flex align-items-center position-relative">
+          <div className="d-flex align-items-center instructor-position-relative">
             {/* Notification Icon */}
             <span
-              className="notification-icon mx-3"
+              className="instructor-notification-icon mx-3"
               onClick={handleNotificationClick}
             >
               <i
-                className={`fas fa-bell ${hasNewNotifications ? 'new-notifications' : ''}`}
+                className={`fas fa-bell ${hasNewNotifications ? 'instructor-new-notifications' : ''}`}
               ></i>
             </span>
 
             {/* Notification Dropdown */}
             {showNotifications && (
-              <div className="notifications-dropdown">
+              <div className="instructor-notifications-dropdown">
                 <p>No new notifications</p> {/* Replace with dynamic notifications */}
               </div>
             )}
 
             {/* Profile Picture and Popup */}
             <div
-              className="position-relative profile-picture"
+              className="instructor-profile-picture"
               onMouseEnter={() => setShowProfile(true)}
               onMouseLeave={() => setShowProfile(false)}
             >
               <img
                 src={profilePic}
                 alt="Profile"
-                className="profile-pic"
+                className="instructor-profile-pic"
               />
               {showProfile && (
-                <div className="profile-popup">
+                <div className="instructor-profile-popup">
                   <img
                     src={profilePic}
                     alt="Profile"
-                    className="popup-profile-pic"
+                    className="instructor-popup-profile-pic"
                   />
                   <p>Instructor Name</p>
                   <p>Email: instructor@example.com</p>

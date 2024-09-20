@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { courseData } from "../data";
 import StudentProfiles from "./StudentProfiles";
 import CourseContent from "./CourseContent";
+import InstructorNavbar from './InstructorNavbar'; // Import the InstructorNavbar component
 import './CourseDetail.css';
 
 const CourseDetail = () => {
@@ -43,6 +44,8 @@ const CourseDetail = () => {
 
   return (
     <div className="course-detail-container">
+      <InstructorNavbar />
+       {/* Include the InstructorNavbar component */}
       <div className="course-detail-content">
         {/* Course Information */}
         <div className="course-info">
@@ -84,15 +87,16 @@ const CourseDetail = () => {
           newContent={newContent}
           addNewContent={addNewContent}
         />
-         {/* Course Action Buttons */}
-         <div className="course-action-buttons">
-        <button className="add-more-btn" onClick={handleAddToggle}>
-          Add More
-        </button>
-        <button className="edit-course-btn" onClick={handleEditToggle}>
-          Edit Course
-        </button>
-      </div>
+        
+        {/* Course Action Buttons */}
+        <div className="course-action-buttons">
+          <button className="add-more-btn" onClick={handleAddToggle}>
+            Add More
+          </button>
+          <button className="edit-course-btn" onClick={handleEditToggle}>
+            Edit Course
+          </button>
+        </div>
 
         {/* Enrolled Students */}
         <div className="enrolled-students">
@@ -100,13 +104,6 @@ const CourseDetail = () => {
           <StudentProfiles students={course.students} />
           <button className="view-all-btn">View All</button>
         </div>
-      </div>
-       
-
-      {/* Learning Path Actions */}
-      <div className="learning-path-actions">
-        <button onClick={handleFileUpload}>Upload Learning Path</button>
-        <button onClick={handleCreateLearningPath}>Create Learning Path</button>
       </div>
     </div>
   );
