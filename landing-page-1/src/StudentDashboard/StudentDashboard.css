@@ -8,10 +8,10 @@
   background-color: #f5f5f5; /* Adjust as needed */
 }
 
-.dashboard-content {
+.student-dashboard-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Adjust column layout */
-  gap: 10px; /* Increased gap between items for better visibility */
+  gap: 20px; /* Reduced gap between items for a more compact look */
   padding: 10px; /* Reduced padding around the grid */
   width: 100%;
   box-sizing: border-box;
@@ -19,38 +19,46 @@
   overflow-y: auto; /* Allow vertical scroll if content exceeds window height */
 }
 
-.dashboard-content > * {
+.student-dashboard-content > * {
   background-color: white; /* Consistent background color for all components */
-  padding: 15px; /* Adjusted padding inside each card */
-  border-radius: 8px; /* Slightly reduced border radius for a sharper look */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
+  padding: 10px; /* Reduced padding inside each card */
+  border-radius: 6px; /* Slightly reduced border radius for a sharper look */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
   width: 100%; /* Ensure full width */
   box-sizing: border-box;
 }
 
-.badges-learning-container {
+.student-badges-learning-container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr; /* Make badges container wider */
-  gap: 50px; /* Consistent gap between badges and learning trend */
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns for badges, trend, and courses */
+  gap: 20px; /* Reduced gap for a more compact layout */
   grid-column: span 3; /* Span full width */
 }
 
-.badges, .learning-trend {
-  min-height: 250px; /* Ensure both components have the same minimum height */
+.student-badges,
+.student-learning-trend,
+.student-course-list {
+  min-height: 200px; /* Reduced minimum height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1; /* Allow components to grow and shrink */
+}
+
+/* Ensure Learning Trend component behaves correctly in responsiveness */
+.student-learning-trend {
+  min-width: 0; /* Prevent overflow in smaller screens */
 }
 
 /* Responsive styles for various screen sizes */
 @media screen and (max-width: 1200px) {
-  .dashboard-content {
+  .student-dashboard-content {
     grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
   }
 }
 
 @media screen and (max-width: 800px) {
-  .dashboard-content {
+  .student-dashboard-content {
     grid-template-columns: 1fr; /* Single column for very small screens */
   }
 }
@@ -67,50 +75,46 @@
 }
 
 /* Component-specific style adjustments */
-.learning-time,
-.status,
-.quizzes,
-.course-progress,
-.course-list,
-.learning-trend,
-.badges {
-  min-height: 250px; /* Ensure that all components have a base minimum height */
+.student-learning-time,
+.student-status,
+.student-quizzes,
+.student-course-progress,
+.student-course-list,
+.student-learning-trend,
+.student-badges {
+  min-height: 200px; /* Ensure that all components have a base minimum height */
   background-color: #f4f4f9;
-  padding: 15px; /* Consistent padding for all components */
-  border-radius: 8px; /* Consistent border radius */
+  padding: 10px; /* Consistent padding for all components */
+  border-radius: 6px; /* Consistent border radius */
 }
 
-.learning-time {
+.student-learning-time {
   grid-column: span 1; /* Adjust span as needed */
 }
 
-.course-progress {
+.student-course-progress {
   grid-column: span 1;
 }
 
-.status {
+.student-status {
   grid-column: span 1;
 }
 
-.quizzes {
+.student-quizzes {
   grid-column: span 1;
 }
 
-.learning-trend {
-  grid-column: span 2;
-  height: 100%; /* Ensure it fits the available height */
-  margin: 0;
-  display: table-header-group;
-  height: auto;
+.student-learning-trend {
+  height: auto; /* Allow it to grow based on content */
 }
 
-.badges {
+.student-badges {
   height: auto; /* Allow it to grow based on content */
 }
 
 /* Responsive styles for various screen sizes */
 @media (max-width: 600px) {
-  .dashboard-content {
+  .student-dashboard-content {
     grid-template-columns: 1fr; /* Single column for small screens */
   }
 }

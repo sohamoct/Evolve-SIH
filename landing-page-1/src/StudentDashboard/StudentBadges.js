@@ -5,7 +5,7 @@ import './Badges.css';
 const Badges = ({ recentBadge, otherBadges }) => {
     return (
         <div className="badges-container">
-            <h3 className="badges-title">Badges</h3>
+            <h3 className="badges-title">Badges Earned</h3>
             <div className="badge recent-badge">
                 <img src={recentBadge.imageUrl} alt={recentBadge.title} />
                 <div className="badge-info">
