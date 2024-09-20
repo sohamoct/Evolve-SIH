@@ -20,9 +20,10 @@ const PersonalDashboard = () => {
       <YourCourses />
       <LearningTime /> {/* Use as a component */}
       </div>
-      
-      <RecommendCourses />
-      <QuizzesGiven />
+      <div className='third-row'>
+      <RecommendCourses/>
+      <QuizzesGiven/>
+      </div>
       <DiscussionSection />
     </div>
   );

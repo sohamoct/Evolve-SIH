@@ -4,7 +4,7 @@ import './QuizzesGiven.css';
 const QuizzesGiven = () => {
   return (
     <div className="quizzes-given">
-      <h2>Quizzes Given</h2>
+      <h3>Quizzes Given</h3>
       <div className="quiz-list">
         <div className="quiz-item">
           <h3>Deep Learning Quiz</h3>
