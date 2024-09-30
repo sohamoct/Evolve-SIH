@@ -1,0 +1,165 @@
+/* Container for the entire course list section */
+.your-all-courses {
+  min-width: fit-content;
+  background-color: #ffffff; /* Light background color for the entire section */
+  padding: 20px; /* Padding around the section */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  margin: 20px auto; /* Margin above and below the section */
+  max-width: 800px; /* Maximum width for the section */
+}
+
+/* Section title styling */
+.section-title {
+  background-color: #fff; /* White background for the title */
+  padding: 12px; /* Padding around the title */
+  border-radius: 5px; /* Rounded corners for the background */
+  font-size: 20px; /* Font size for the title */
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Dark color for the title */
+  margin-bottom: 15px; /* Space below the title */
+  text-align: center; /* Center-align the title text */
+}
+
+/* Container for the course list */
+.course-list {
+  padding: 0; /* Remove padding to avoid extra space around the list */
+  display: flex; /* Use flex for alignment */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  gap: 15px; /* Space between cards */
+  background-color: #f1f3f5;
+}
+
+/* Styling for individual course cards */
+.course-card {
+  display: flex;
+  flex-direction: row; /* Stack content horizontally */
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px; /* Padding for the card */
+  border: 1px solid #ddd;
+  background-color: #fff; /* Background color for better visibility */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+  width: 90%; /* Width as a percentage of the container */
+  max-width: 600px; /* Maximum width for the card */
+  height: auto; /* Adjust height automatically based on content */
+}
+
+/* Add hover effect to course cards */
+.course-card:hover {
+  transform: translateY(-3px); /* Lift card slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Thumbnail image for each course card */
+.course-card img {
+  width: 80px; /* Width for the image */
+  height: 80px; /* Height for the image */
+  border-radius: 5px; /* Rounded corners for the image */
+  object-fit: cover; /* Ensure image covers the container without distortion */
+  margin-right: 15px; /* Space between image and text */
+}
+
+/* Styling for course titles and descriptions */
+.course-card-content h3 {
+  margin: 0;
+  font-size: 16px; /* Font size for the title */
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Dark color for title */
+}
+
+.course-card-content p {
+  margin: 5px 0 0 0; /* Space below the title */
+  font-size: 12px; /* Font size for description */
+  color: #666; /* Subtle color for description */
+}
+
+/* Arrow indicating more details */
+.arrow {
+  font-size: 16px; /* Font size for the arrow */
+  color: #007bff; /* Color of the arrow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+  .your-all-courses {
+    max-width: 90%; /* Adjust max-width for medium screens */
+  }
+
+  .course-card {
+    width: 95%; /* Adjust card width for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .your-all-courses {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .section-title {
+    font-size: 18px; /* Adjust font size for the title */
+    margin-bottom: 10px; /* Space below the title */
+  }
+
+  .course-card {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .course-card img {
+    width: 70px; /* Adjust width for smaller image */
+    height: 70px; /* Adjust height for smaller image */
+    margin-right: 0; /* Remove margin for stacked layout */
+    margin-bottom: 10px; /* Space below the image */
+  }
+
+  .course-card-content h3 {
+    font-size: 14px; /* Adjust font size for the title */
+  }
+
+  .course-card-content p {
+    font-size: 10px; /* Adjust font size for description */
+  }
+
+  .arrow {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .your-all-courses {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .section-title {
+    font-size: 16px; /* Adjust font size for the title */
+  }
+
+  .course-card {
+    width: 100%; /* Full width for the card */
+  }
+
+  .course-card-content h3 {
+    font-size: 12px; /* Adjust font size for the title */
+  }
+
+  .course-card-content p {
+    font-size: 8px; /* Adjust font size for description */
+  }
+
+  .arrow {
+    font-size: 12px; /* Adjust font size */
+  }
+}
+.course-list {
+  padding: 0; /* Remove padding to avoid extra space around the list */
+  display: flex; /* Use flex for alignment */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  gap: 15px; /* Space between cards */
+  background-color: #f1f3f5;
+}
