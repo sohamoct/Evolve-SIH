@@ -22,7 +22,7 @@
 }
 
 /* Container for the course list */
-.course-list {
+.inst-course-list {
   padding: 0; /* Remove padding to avoid extra space around the list */
   display: flex; /* Use flex for alignment */
   flex-direction: column; /* Stack cards vertically */

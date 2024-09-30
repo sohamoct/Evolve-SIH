@@ -7,7 +7,7 @@
     background-color: #6da4db;
   }
   
-  .course-list {
+  .rec-course-list {
     display: flex;
     flex-direction: row;
     width: fit-content;

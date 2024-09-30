@@ -5,7 +5,7 @@ const RecommendCourses = () => {
   return (
     <div className="recommend-courses">
       <h2>Recommended Courses</h2>
-      <div className="course-list">
+      <div className="rec-course-list">
         <div className="course-card">
           <div className="card-image">
             <img src="https://online.york.ac.uk/wp-content/uploads/2021/09/Illustration-of-a-brain-with-cogs-inside-and-pathways-outside-and-deep-learning-written-above.jpg" alt="Course" />
